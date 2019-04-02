@@ -1,6 +1,0 @@
-		/*cuando el ancho sea superior a 700px*/
-		@media screen and (min-width: 700px) {
-			body{
-				background-color: rgb(108, 73, 86);
-			}
-		}

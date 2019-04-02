@@ -1,6 +1,0 @@
-		/*cuando el ancho sea menor de 500px*/
-		@media screen and (max-width: 500px) {
-			body{
-				background-color: rgb(1, 252, 218);
-			}
-		}
