@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>pruebas</title>
+</head>
+<body style="transition: 0.5s;">
+	<button onclick="abrir();">ABRIR</button>
+	<script>
+		function abrir(){
+			
+			window.open("https://www.lucapc.es","width=300","height=300");
+
+		}
+		var colores= ['pink','red','yellow','blue','orange'];
+		var i=0;
+		function cambiar(){
+			document.body.style.backgroundColor = colores[i];
+			i = ++i % colores.length;
+		}
+		window.onload = setInterval(cambiar,2000);
+
+		var tiempo=10;
+		function evaluar(){
+			if (tiempo-- == 0) {
+				propaganda.remove();
+				clearInterval(timer);
+			}else
+			trestante.innerHTML=tiempo;
+		}
+		var timer=window.setInterval(evaluar,2000);
+
+		function cierraPropaganda(){
+			propaganda.remove();
+		}
+		var timer=setTimeout(cierraPropaganda,10000);
+	</script>
+	<p>una pagina muy colorida</p>
+	<div id="propaganda">
+		<h2>propaganda....</h2>
+		<span id="trestante">10</span>s.
+		<img src="toyota.png">
+	</div>
+</body>
+</html>

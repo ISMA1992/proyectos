@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>IVA</title>
+	<script>
+		function calcular(){
+			var precio=parseFloat(document.getElementById('precio').value)
+			var iva=parseFloat(document.getElementById('iva').value)
+
+			precio*=iva;
+
+			document.getElementById('resultado').innerHTML=precio.toFixed(2);
+		}
+	</script>	
+</head>
+<body>
+	<label>Imporete sin iva</label>
+		<input type="number" id="precio">
+	<label>IVA</label>
+	<select id="iva">
+		<option value="1.21">normal (21%)</option>
+		<option value="1.1">reducido (10%)</option>
+		<option value="1.04">super reducido</option>
+	</select>
+		<button type="button" onclick="calcular();">calcular</button><br>
+		<span>el precio total es </span><output id="resultado"> €</output>
+		
+</body>
+</html>

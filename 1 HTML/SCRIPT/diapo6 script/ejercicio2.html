@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>ejercicio2</title>
+</head>
+<body>
+	<h1>Numeros en ascendente:</h1>
+	<label>Numero1</label>
+	<input type="number" id="num1">
+	<label>Numero2</label>
+	<input type="number" id="num2">
+	<button onclick="calcular();">calcular</button>
+	<output id="resultado"></output>
+	<hr>
+	<script>
+		function calcular(){
+			var n1=parseFloat(document.getElementById('num1').value);
+			var n2=parseFloat(document.getElementById('num2').value);
+
+			for( ;n2>=n1;n1++){
+				resultado.innerHTML += n1+',';
+			}for( ;n1>=n2;n2++){
+				resultado.innerHTML += n2+',';
+			}
+
+		}	
+	</script>
+</body>
+</html>

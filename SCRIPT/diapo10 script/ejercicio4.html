@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>ejercicio 4</title>
+	<style>
+		h1{
+			color: #0000ff;
+			text-shadow: 3px 3px 3px #00ff00;
+		}
+	</style>
+	<script>
+		function invertir (contra){
+				var contra2="";
+
+				for (let i = contra.length; i>0; i--){
+					contra2+=contra[i-1];
+				}
+				alert(contra); 
+		}
+		function encriptar(){
+				var contra = "";
+				var  resul = password.value;
+				var num = numero.value;
+
+				for (let i = 0; i<resul.length; i++){
+						contra+= String.fromCharCode(parseInt(resul.charCodeAt(i))+num);	
+				}
+				if (resul.length==contra.length){
+							invertir (contra);
+				}
+       	}	 
+		function desencriptar() {
+				var contra="";
+				var resul = password.value;
+				var num = numero.value;
+
+				for (let i = 0; i<resul.length; i++){
+					contra+= String.fromCharCode(parseInt(resul.charCodeAt(i))-num);
+				}
+				if (resul.length==contra.length){
+					invertir (resul);
+				}
+		}
+		
+	</script>
+</head>
+<body>
+	<h1>Encripta tu contraseña</h1>
+
+	<label>Introduce tu contraseña: </label>
+	<input type="text" id="password"><br>
+	<label>Numero deseado sumar/restar a la encriptacion: </label>
+	<input type="number" id="numero"><br><br>
+	<button onclick="encriptar();">Encripta</button>
+	<button onclick="desencriptar();">Desencripta</button>
+</body>
+</html>

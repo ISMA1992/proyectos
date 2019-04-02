@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 3</title>
+	<style>
+		body{
+			background-color: rgb(195, 198, 198);
+		}
+		h1{
+			color: #0000ff;
+			text-shadow: 3px 3px 3px #7B7B7B;
+		}
+		h3{
+			color: #ff0000;
+			text-shadow: 3px 3px 3px #7B7B7B;
+		}
+		output{
+			color: #037086;
+			text-shadow: 3px 3px 3px #7B7B7B;
+		}
+	</style>
+	<script>
+		var numeros = []; 
+		
+		function recoger(num1, num2, num3, num4, num5){
+			numeros = [num1, num2, num3, num4, num5];
+			
+			document.getElementById('recogida').innerHTML = "Los números recogidos son: "+numeros;
+
+		}
+		function indicede(n){
+
+			for(let i = 0; i<numeros.length; i++){
+				if(n == numeros[i]){	
+				}
+				resultado.innerHTML = i + 1;
+				break;
+				}
+		}	
+		function ultimoindicede(n){
+
+			for(let i = numeros.length-1; i > 0 ; i--){
+				if(n == numeros[i]){
+					
+				}
+				resultado.innerHTML = i+1;
+				break;
+				}
+		}
+		function concatenar(){
+			var con = [5,3,8,1,0];
+			for(let i = numeros.length-1; i > 0 ; i--){	
+				
+				con.push(numeros[i]);
+			}
+				resultado.innerHTML = con;
+				break;
+		}
+		function invertir(){
+			var in=[];
+
+			for (let i=numeros.length-1; i>=0; i--){
+				
+				in.push(numeros[i]);
+			}
+				resultado.innerHTML = in;
+		}
+	</script>
+</head>
+<body>
+	<h1>IndiceDe, UltimoIndiceDe, Concatenar, Invertir.</h1>
+	<label>Numero: </label>
+	<input type="number" id="numero1">
+	<label>Numero: </label>
+	<input type="number" id="numero2">
+	<label>Numero: </label>
+	<input type="number" id="numero3">
+	<label>Numero: </label>
+	<input type="number" id="numero4">
+	<label>Numero: </label>
+	<input type="number" id="numero5">
+	<br>
+	
+	<button onclick="recoger(parseInt(numero1.value), parseInt(numero2.value),parseInt(numero3.value),parseInt(numero4.value), parseInt(numero5.value));">RECOGER</button>
+	
+	<label>Número a agregar: </label><input type="number" id="num" />
+	<button onclick="numeros.pop();">Borrar ultimo numero</button>
+	<h3 id="recogida"></h3>
+	<hr>
+	<button onclick="indicede(parseInt(num.value));">indice</button>
+	<button onclick="ultimoindicede(parseInt(num.value));">ultimoindice</button>
+	<button onclick="concatenar();">concatena</button>
+	<button onclick="invertir();">invertir</button><br>
+	<output id="resultado">0</output>
+</body>
+</html>

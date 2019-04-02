@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ejercicio1</title>
+	<style type="text/css">
+		form{
+			width: 59.5%;
+			display: inline-block;
+		}
+		label{
+			width: 28%;
+			display: inline-block;
+		}	
+			</style>
+</head>
+<body>
+	<form method="get" autocomplete="off">
+		<h1>User input form</h1>
+		<fieldset>
+			<legend>Personal particular</legend>
+				<label>Name:</label>
+				<input type="text" name="Name"/></br>
+				<label>Password:</label>
+				<input type="Password" name="pwd"/></br>
+				<label>Gender</label>
+				<input type="radio" name="sexo" value="H" checked="checked"/>
+				<label>Hombre</label>
+				<input type="radio" name="sexo" value="M"/>
+				<label>Mujer</label>
+				
+					<label>Age</label>
+					<select>
+					<option value="1">1 año viejo</option>
+					<option value="2">2 año viejo</option>
+					<option value="3">3 años viejo</option>
+					<option value="4">4 años viejo</option>
+				</select>
+		</fieldset>
+		<fieldset>
+			<legend>Languages</legend>
+			<input type="checkbox" name="java" value="j">
+			<label>Java</label>
+			<input type="checkbox" name="C/C++" value="C">
+			<label>C/C++</label>
+			<input type="checkbox" name="C#" value="C#">
+			<label>C#</label>
+		</fieldset>
+		<fieldset>
+			<legend>Instruction</legend>
+			<textarea rows="10" cols="40">Enter your instructionhere....</textarea>
+		</fieldset>
+	</form>
+	<form method="get" autocomplete="off">
+		<fieldset>
+		<legend>Datos personales</legend>
+			<label>Nombre</label></br>
+			<input type="text" name="Nombre"/></br>
+			<label>Apellidos</label></br>
+			<input type="text" name="Apellidos"/></br>
+			<label>DNI</label></br>
+			<input type="text" name="DNI"/></br>
+			<button type="submit">SEND</button>
+			<button type="reset">CLEAR</button>		
+	</fieldset>
+	<h1>Formulario estructurado</h1>
+	<fieldset>
+		<legend>Datos de conexion</legend>
+		<label>Nombre de usuario</label></br>
+		<input type="text" name="Nombreusuario"/></br>
+		<label>Contraseña</label></br>
+		<input type="text" name="Contraseña"/></br>
+		<label>Repite la contraseña</label></br>
+		<input type="text" name="Contraseña"/></br>
+	</fieldset>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cambio filtro de imagen</title>
+	<style>
+	section{
+		width: 100%;
+		border: solid 1px;
+		display: inline-block;
+	}
+	div{
+		width: 50%;
+		border: solid 1px;
+		display: inline-block;
+	}
+	figure{
+		display: inline-block;
+		width: 40%;
+	}
+	figure img{
+		width: 85%;
+		vertical-align: middle; 
+	}
+	</style>
+	<script>
+		function desenfoque(){
+			var bl=document.getElementById('blur').value;
+			document.getElementById('imagen').style.filter = 'blur('+bl+'px)';
+		}
+		function brillo(){
+			var bri=document.getElementById('brigt').value;
+			document.getElementById('imagen').style.filter = 'brigt('+bri+'%)';
+		}
+		function contraste(){
+			var con=document.getElementById('contra').value;
+			document.getElementById('imagen').style.filter = 'contra('+con+'%)';
+		}
+		function sombra(){	
+			var sha=document.getElementById('shadow').value;
+		}
+		function escalag(){
+			var gray=document.getElementById('grayscale').value;
+		}
+		function tono(){
+			var ro=document.getElementById('rotate').value;
+		}	
+		function invierte(){
+			var in=document.getElementById('invert').value;
+		}
+		function opacidad(){
+			var opa=document.getElementById('opacity').value;
+		}
+		function saturacion(){
+			var sat=document.getElementById('saturate').value;
+		}
+		function antigua(){
+			var sep=document.getElementById('sepia').value;
+		} 
+	</script>
+</head>
+<body>
+	<h1>Cambio filtro de imagenes</h1>
+	<section>
+			<figure>
+				<img src="homer.jpg" id="imagen">
+			</figure>
+			<div>
+				<label>Blur(px):</label><br>
+				0<input type="range" id="blur" min="0" max="20" onchange="desenfoque();" />20<br>
+				<label>Brigtness(%):</label><br>
+				0<input type="range" id="brigt" min="0" max="20" onchange="brillo();" />20<br>
+				<label>Contrast(%):</label><br>
+				0<input type="range" id="contrast" min="0" max="20" onchange="contraste();" />20<br>
+				<label>Drop-shadow(h,v,b,c):</label><br>
+				0<input type="range" id="shadow" min="0" max="20" onchange="sombra();" />20<br>
+				0<input type="range" id="shadow" min="0" max="20" onchange="sombra();"/>20<br>	
+				0<input type="range" id="shadow" min="0" max="20" onchange="sombra();"/>20<br>
+				<label>Grayscale(%):</label><br>
+				0<input type="range" id="grayscale" min="0" max="20" onchange="escalag();"/>20<br>
+				<label>Hue-rotate(deg):</label><br>
+				0<input type="range" id="rotate" min="0" max="20" onchange="tono();"/>20<br>
+				<label>Invert(%):</label><br>
+				0<input type="range" id="invert" min="0" max="20" onchange="invierte();"/>20<br>
+				<label>Opacity(%):</label><br>
+				0<input type="range" id="opacity" min="0" max="20" onchange="opacidad();"/>20<br>
+				<label>Saturate(%):</label><br>
+				0<input type="range" id="saturate" min="0" max="20" onchange="saturacion();"/>20<br>
+				<label>Sepia(%):</label><br>
+				0<input type="range" id="sepia" min="0" max="20" onchange="antigua();"/>20<br>
+				<button onclick="restart();">Reestablecer</button>
+			</div>
+	</section>
+</body>
+</html>

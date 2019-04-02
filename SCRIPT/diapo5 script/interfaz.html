@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Interfaz Grafica</title>
+	<script>
+		function calcular(){
+			// tomar notas de los input
+			var teoria=parseFloat(inteoria.value);
+			var practica=parseFloat(inpractica.value);
+			// calcular nota
+			var nota= teoria*0.3+practica*0.7;
+			// bifurcacion simple: si ay punto extra
+			if (inextra.checked){
+				nota++;
+			}
+			// otra bifurcacion simple: si nota es >10
+			if (nota>10){
+				nota=10;
+			}
+			outresultado.innerHTML= nota;
+		}
+	</script>
+</head>
+<body>
+	<input type="number" id="inteoria">
+	<input type="number" id="inpractica">
+	<input type="checkbox" id="inextra">
+	<hr>
+	<button onclick="calcular();">calcula</button>
+	<output id="outresultado"></output>
+</body>
+</html>

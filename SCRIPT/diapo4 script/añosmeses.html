@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>años y meses</title>
+	<script>
+		function calcular(){
+			var a1=parseFloat(document.getElementById('año1').value);
+			var a2=parseFloat(document.getElementById('año2').value);
+			var m1=parseFloat(document.getElementById('mes1').value);
+			var m2=parseFloat(document.getElementById('mes2').value);
+
+			if (a1>a2){
+				document.getElementById('resultado').innerHTML=((a1-a2)*12)+m1-m2;
+			}else if (a2>a1){
+				document.getElementById('resultado').innerHTML=((a2-a1)*12)+m2-m1;
+			}else{
+				if (m1>m2){
+				document.getElementById('resultado').innerHTML=m1-m2;
+				}else{
+					document.getElementById('resultado').innerHTML=m2-m1;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Calcular meses de diferencia</h1>
+	<label>Año 1</label>
+	<input type="number" id="año1"><br>
+	<label>Año 2</label>
+	<input type="number" id="año2"><br>
+	<label>Mes 1</label>
+	<input type="number" id="mes1"><br>
+	<label>Mes 2</label>
+	<input type="number" id="mes2"><br>
+	<hr>
+
+	<button type="button" onclick="calcular();">Calculo</button>
+	<output id="resultado"></output>
+</body>
+</html>

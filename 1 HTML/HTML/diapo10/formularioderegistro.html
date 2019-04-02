@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>formulario registro</title>
+	<style type="text/css">
+		form{
+			width: 650px;
+		    background: #BAD4FF;	
+		}
+		label{
+			width: 40%;	
+		}
+		input:invalid{
+			border: 1px solid red;
+		}
+		input:valid{
+			border: 1px solid green;
+		}
+	</style>
+</head>
+<body>
+	<form method="get" autocomplete="off">
+		<fieldset>
+			<h1>Frmulario de registro</h1>
+			<label>Nombre de ususario</label>
+			<input type="text" name="name" placeholder="ingrese su nombre">
+			<label>Correo</label>
+			<input type="email" name="email" placeholder="Ingrese Su Correo"></br>
+			<label>Contraseña</label>
+			<input type="password" name="pwd" placeholder="Ingrese su contraseña">
+			<label>Sexo</label>
+		<select>
+			<option value="1" checked="checked">No Especificar</option>
+			<option value="2">Mujer</option>
+			<option value="3">Hombre</option>
+		</select></br>
+			<label>País</label>
+			<input type="text" name="text" placeholder="Ingrese su País"></br>
+			<label>Subir tu foto</label>
+			<input type="file" name="image/*" multiple="multiple"></br>
+			<label>Cuentanos mas sobre ti</label></br>
+			<textarea rows="10" cols="60">Cuentanos algo sobre ti....</textarea></br>
+			<label>Cuanto sabes de HTML5?</label>
+			<input type="range" name="points" min="0" max="10" step="1" value="5"></br>
+			<label>Desea suscribirse a nuestro boletín?</label>
+			<input type="radio" name="si" value="si">
+			<label>Si</label>
+			<input type="radio" name="No" value="No">
+			<label>No</label>
+			<label>Cada cuantos dias desea recibirlo</label>
+		<select>
+			<option value="1">15 dias</option>
+			<option value="2">20 dias</option>
+			<option value="3">30 dias</option>
+		</select></br>
+			<input type="radio">
+			<label>He leido los terminos de condiciones y uso</label></br>
+			<button type="submit">Enviar</button>
+			<button type="reset">Cancelar</button>
+		</fieldset>
+	</form>
+</body>
+</html>

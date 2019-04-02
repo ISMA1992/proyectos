@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Galeria fotográfica</title>
+	<style>
+		html{
+			background-color: rgb(4, 107, 198);
+		}
+		h1{
+			color: #F300FF;
+			text-shadow: 3px 3px 3px #000000;
+			text-align: center;
+		}
+		figcaption{
+			font-size: 1.5vw;
+			color: #ffffff;
+			text-shadow: 3px 3px 3px #ff0000;
+		}
+		#galeria figure{
+            background-color: white;
+            box-shadow: 4px 4px 4px 5px #404040;
+			display: inline-block;
+			margin: 10px;
+			padding: 15px;
+			border: solid 3px #FF8F00;
+			border-radius: 15px;
+		}
+		#galeria figure img:hover{
+			transform: scale(1.2);
+		}
+		#galeria figure img{
+			height: 200px;
+			width: 340px;
+			border-radius: 10px;
+			box-shadow: 3px 3px 4px 3px rgba(00, 00, 00, 0.9);
+			transition: 2s;
+		}
+        #galeria figure figcaption{
+            text-align: center;
+        }
+		figure.grande{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			width: 95%;
+			height: 95%;
+			background-color: rgba(00, 00, 00,0.5);
+			text-align: center;
+			border-radius: 100px;
+			border: solid 3px #ffffff;
+			box-shadow: 4px 4px 4px 5px #818080;
+		}
+		 figure.grande a{
+            position: absolute;
+            color: white;          
+            z-index: 100;
+            background-color: #000000;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 4px 4px 4px #818080;
+            font-weight: bold;
+            font-family: helvetica;
+        }
+		figure.grande a.anterior{
+            top: 45%;
+            left: 8%;
+            color: #00ff00;
+            border: solid 3px #00ff00;
+            background-color: rgb(0, 81, 255);
+		}
+        figure.grande a.siguiente{
+            top: 45%;
+            right: 8%;
+            color: #00ff00;
+            border: solid 3px #00ff00;
+            background-color: rgb(0, 81, 255);
+		}
+		figure.grande img.cerrar{
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            border-radius: 100%;
+        }
+        figure.grande img:not(.cerrar){
+            background-color: rgba(60, 100, 150,0.9);
+            box-shadow: 3px 3px 3px 5px #818080;
+            padding: 5%;
+            margin-top:5%;                   
+			height: 60%;
+			border-radius: 60px;
+			border: solid 3px #000000;
+		}
+		div{
+			text-align: center;
+		}
+		</style>
+		
+</head>
+<body>
+	<h1>GALERIA FOTOGRÁFICA</h1>
+	<div id="galeria">
+			<figure>
+				<img src="galeria/castillomonzon.jpg" data-name="Castillo Templario (Monzon)">
+			</figure>
+			<figure>
+				<img src="galeria/loarre.jpg" data-name="Castillo de (Loarre)">
+			</figure>
+			<figure>
+				<img src="galeria/hogwarts.jpg" data-name="Castillo Hogwarts de Magia">
+			</figure>
+			<figure>
+				<img src="galeria/castillodracula.jpg" data-name="Castillo del Conde Dracula (Transilvania)">
+			</figure>
+			<figure>
+				<img src="galeria/Castillowindsor.jpg" data-name="Castillo Windsor (Inglaterra)">
+			</figure>
+			<figure>
+				<img src="galeria/riojaneiro.jpg" data-name="Cristo Bienvenida (Rio De Janeiro)">
+			</figure>
+			<figure>
+				<img src="galeria/torreseattle.jpg" data-name="Torre (Seattle)">
+			</figure>
+			<figure>
+				<img src="galeria/estatualibertad.jpg" data-name="Estatua de la libertad (NEW YORK)">
+			</figure>
+			<figure>
+				<img src="galeria/torreeifel.jpg" data-name="Torre Eiffel (Paris)">
+			</figure>
+			<figure>
+				<img src="galeria/torrepisa.jpg" data-name="Torre de Pisa (Italia)">
+			</figure>
+			<figure>
+				<img src="galeria/dubai.jpg" data-name="Edificio mas alto del mundo (Dubai)">
+			</figure>
+			<figure>
+				<img src="galeria/stringio.jpg" data-name="Stringio (Sidney)">
+			</figure>
+			<figure>
+				<img src="galeria/tajmahal.png" data-name="Tajmahal (India)">
+			</figure>
+			<figure>
+				<img src="galeria/Guggenheim.jpg" data-name="Guggenheim (Bilbao)">
+			</figure>
+			<figure>
+				<img src="galeria/louvre.jpg" data-name="Museo Louvre (Francia)">
+			</figure>
+			<figure>
+				<img src="galeria/budista.jpg" data-name="Templo Budista (Huesca)">
+			</figure>
+			<figure>
+				<img src="galeria/templomontaña.jpg" data-name="Templo Dalai Lama (India)">
+			</figure>
+			<figure>
+				<img src="galeria/esfimge.jpg" data-name="Esfimge (Egipto)">
+			</figure>
+			<figure>
+				<img src="galeria/amazonas.jpg" data-name="Rio Amazonas (America del Sur)">
+			</figure>
+			<figure>
+				<img src="galeria/amazonasdom.jpg" data-name="Dominios del rio Amazonas (America del Sur)">
+			</figure>
+			
+	</div>
+	<script>
+			window.onload = function(){
+				
+				var figuras = document.getElementById('galeria').getElementsByTagName('figure');
+
+				for(var i=0; i<figuras.length; i++){
+					
+					figuras[i].onclick = function(){
+						mostrar(this);
+					}
+				}
+			}
+
+			function mostrar(figura){
+				var imagen = document.createElement('img');
+				imagen.setAttribute('src', figura.firstElementChild.src);
+				
+				var figurag = document.createElement('figure');
+				figurag.setAttribute('class','grande');
+				
+
+				var nombre = document.createElement('figcaption');
+				var name = figura.firstElementChild.dataset.name;
+                   
+				var imagenCerrar = document.createElement('img');
+                    imagenCerrar.setAttribute('src', 'imagenes/cerrar.png');
+                    imagenCerrar.setAttribute('class','cerrar');
+
+                imagenCerrar.onclick = function(){
+                	this.parentElement.remove();
+               	}
+
+			  	var anterior = figura.previousElementSibling;
+                if(anterior!=null){
+                     var enlaceAnterior = document.createElement('a');
+                     enlaceAnterior.innerHTML = 'Anterior';
+                     enlaceAnterior.setAttribute('class','anterior');
+                     enlaceAnterior.onclick = function(){
+                          this.parentNode.remove();
+                          mostrar(anterior);
+                     }
+                }
+
+                var siguiente = figura.nextElementSibling;
+                if(siguiente!=null){
+                     var enlaceSiguiente = document.createElement('a');
+                     enlaceSiguiente.innerHTML = "Siguiente";
+                     enlaceSiguiente.setAttribute('class','siguiente');
+                      enlaceSiguiente.onclick = function(){
+                          this.parentNode.remove();
+                          mostrar(siguiente);
+                     }
+                }
+                figurag.appendChild(imagenCerrar);
+                figurag.appendChild(imagen);
+
+				if(enlaceAnterior!=undefined){
+                     figurag.appendChild(enlaceAnterior);
+                }
+                if(enlaceSiguiente!=undefined){
+                     figurag.appendChild(enlaceSiguiente);
+                }    
+				nombre.innerHTML = name.toUpperCase();
+				figurag.appendChild(nombre);
+
+				document.body.appendChild(figurag);
+			}
+		</script>
+</body>
+</html>

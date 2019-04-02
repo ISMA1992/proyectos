@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 1 varios</title>
+		<style>
+			h1{
+				color: #0000ff;
+				text-shadow: 3px 3px 3px #0f0;
+			}
+			p{
+				color: #000000;
+				text-shadow: 3px 3px 3px #0ff;
+			}
+		</style>
+</head>
+<body>
+		<!-- te indica la letra por numero -->
+	<h1>charAt()</h1>
+			<script>
+
+				  var texto = "Hola Ismael";
+				  var resul = texto.charAt(5);
+
+				 	document.write(resul);
+
+			</script>
+			<hr>
+			<!-- añade comas a un texto sin separaciones -->
+	<h1>concat()</h1>
+			<script>
+				var nombre = ["Isma","Ismael"];
+				var cargo = ["Técnico","Programador","Comercial"];
+				var conjunto = nombre.concat(cargo);
+
+				document.write(conjunto);		
+			</script>
+			<hr>
+			<!-- cambia el texto solicitado o ubicacion -->
+	<h1>replace()</h1>
+				<p id="resultado">Vivo en Barcelona</p>
+			<script>
+				function ubication(){
+					var ubicacion = lugar2.value;	
+					var ubicacionAct = "Vivo en Barcelona";
+					var ubicate = ubicacionAct.replace("Barcelona",ubicacion);
+
+					resultado.innerHTML = ubicate;
+				}
+				
+			</script>
+					<label>Ubicacion deseada</label>
+					<input type="text" id="lugar2">
+					<button onclick="ubication();">Cambiar Residencia</button>
+			<hr>
+			<!-- te indica la posicion donde comienza la palabra -->
+	<h1>indexOf()</h1>	
+				<p>Me llamo Ismael Lucena.</p>
+			<script>
+				var nom = "Me llamo Ismael Lucena";
+				var res = nom.indexOf("Ismael");
+
+				document.write(res);
+			</script>
+			<hr>
+			<!-- te indica donde se pronuncia por ultima vez la palabra -->
+	<h1>lastIndexOf()</h1>
+				<p>Me llamo Ismael Lucena Técnico.</p>
+			<script>
+				var nom = "Me llamo Ismael Lucena Técnico";
+				var res = nom.lastIndexOf("Lucena");
+
+				document.write(res);
+			</script>
+			<hr>
+			<!-- te da la posicion donde se encuentra la palabra indicada -->
+	<h1>search()</h1>
+				<p>Me llamo Ismael Lucena Técnico/Programador/Comercial.</p>	
+			<script>
+				var nom = "Me llamo Ismael Lucena Técnico/Programador."; 
+ 				var res = nom.search("Programador");
+
+ 				document.write(res);
+			</script>	
+			<hr>
+			<!-- te indica el texto desde un inicio hasta un fin marcado -->
+	<h1>slice()</h1>
+				<p>Me llamo Ismael Lucena Técnico en Programación.</p>
+			<script>
+				var text = "Me llamo Ismael Lucena Técnico en Programación.";
+				var res = text.slice(0, 15);
+
+				document.write(res);
+			</script>	
+			<hr>
+			<!-- te cambia los espacios por textos -->
+	<h1>split()</h1>
+				<p>Ismael Lucena Técnico microinformático y Programador.</p>
+			<script>
+				var text = "Ismael Lucena Técnico microinformático y Programador.";
+				var res = text.split(" ");
+
+				document.write(res);
+			</script>	
+			<hr>
+			<!-- te muestra el texto desde un punto a otro -->
+	<h1>substring()</h1>
+				<p>Ismael Lucena Técnico microinformático y Programador front end.</p>
+			<script>
+				var text = "Ismael Lucena Técnico microinformático y Programador front end.";
+				var res = text.substring(13, 62);
+
+				document.write(res);
+			</script>	
+			<hr>
+			<!-- te convierte todo el texto en minusculas -->
+	<h1>toLowerCase()</h1>
+				<p>Ismael Lucena Técnico microinformático y Programador front end.</p>	
+			<script>
+				var text = "Ismael Lucena Técnico microinformático y Programador front end..!!"
+				var res = text.toLowerCase();
+
+				document.write(res);
+			</script>
+			<hr>
+			<!-- te convierte el texto en mayusculas -->
+	<h1>toUpperCase()</h1>	
+				<p>ismael lucena técnico microinformático y programador front end...(comercial).</p>	
+			<script>
+				var text = "Ismael Lucena Técnico microinformático y Programador front end...(comercial).";
+
+				document.write(text.toUpperCase());
+			</script>	
+			<hr>
+			<!-- te quita los espacios innecesarios -->
+	<h1>trim()</h1>		
+				<p>ismael  lucena  técnico  microinformático  y  programador  front  end   (comercial).</p>
+			<script>
+				var text ="ismael  lucena  técnico  microinformático  y  programador  front  end   (comercial).";
+
+				document.write(text.trim());
+			</script>				
+</body>
+</html>

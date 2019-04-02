@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Bloquea boton</title>
+</head>
+<body>
+	<button onclick="crear(this);">CLICAME</button>
+	<script>
+		function crear(boton){
+			boton.setAttribute('disabled','disabled');
+				var dvs = document.createElement('div');
+				var text = document.createElement('p');
+				var image = document.createElement('img');
+					image.src = 'toyota.png';
+
+				document.body.appendChild(image);
+
+				setTimeout(function(){
+					image.remove();
+				 
+				 dvs.style.backgroundColor='#F00';
+				 dvs.style.width='300px';
+				 dvs.style.height='300px';
+				 document.body.appendChild(dvs);
+				},2000);
+
+				setTimeout(function(){
+					dvs.remove();
+
+				text.innerHTML='HOLA';
+				document.body.appendChild(text);
+				},4000);
+
+				setTimeout(function(){
+					text.remove();
+					boton.removeAttribute('disabled');
+				},5000)
+		}	
+	</script>
+</body>
+</html>

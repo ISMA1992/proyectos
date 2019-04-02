@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Cubo Giratorio 3d</title>
+	<style>
+		.giratorio{animation: giros 5s linear infinite;}
+
+		@keyframes giros{
+			from{transform: rotateY(0deg) rotateZ(25deg);}
+			to{transform: rotateY(360deg) rotateZ(25deg);}
+		}
+	</style>
+</head>
+<body>
+	<h1>Cubo 3D</h1>
+		<div class="cube giratorio">
+			<div>Front</div>
+			<div>Back</div>
+			<div>Left</div>
+			<div>Right</div>
+			<div>Top</div>
+			<div>Bottom</div>
+		</div>
+</body>
+</html>

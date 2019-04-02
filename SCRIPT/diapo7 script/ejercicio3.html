@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 3</title>
+	<script>
+		function descuento(){
+			var pre=parseFloat(document.getElementById('precio').value);
+			var des=parseFloat(document.getElementById('descontar').value);
+
+			var resultado=pre-(des/100*pre);
+			if(pre<0 || des<0 || des>100){
+				alert('precio incorrecto');
+			}else{
+				var resultado=pre-(des/100*pre);
+				alert('Tu precio final es: '+resultado+'€');
+			}
+		}	
+	</script>
+	<style>
+		h1{
+			text-align: center;
+			color: #000;
+			text-shadow: 3px 3px 3px #00f;
+		}
+		fieldset{
+			background-color: rgba(255,255,0,0.3);
+		}
+	</style>
+</head>
+<body>
+	<h1>Introduce el precio y el descuento deseado</h1>
+	<fieldset>
+		<label>Precio: </label>
+		<input type="number" id="precio">
+		<label>Descuento: </label>
+		<input type="number" id="descontar"><br><br>
+		<button onclick="descuento();">Calcula Precio</button>
+	</fieldset>
+</body>
+</html>

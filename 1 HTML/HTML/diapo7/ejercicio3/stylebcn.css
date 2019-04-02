@@ -1,0 +1,145 @@
+			}
+			*{
+				margin: 0px;
+				padding: 0px;
+			}	
+			div, header, nav, main, footer,{
+				border: 1px solid #000;
+				margin: 2px;
+				border-radius: 20px;
+				/*fondo pagina*/
+			}
+			:root{
+				background-image: url(imagenes/playa1.gif);
+				background-repeat: no-repeat;
+				background-size: 100% 100%; 
+			}
+			/*contenido completo*/
+			body{
+				font-family: arial;
+				margin:  auto;
+				padding: 20px;
+				width: 90%;
+				background-color: rgb(192,192,192,0.2);
+				border-radius: 20px;
+				box-shadow: 2px 2px 2px 2px #BEBEBE;
+				text-align: center;
+			}
+			/*cabecera*/
+			header{
+				background-image: url(imagenes/ciudades.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				margin: auto;
+				border-radius: 20px;
+				background-color: rgba(0,128,255,0.2);
+				width:  90%;	
+				display: inline-block;
+			}
+			/*navegador*/
+			nav{
+				margin: auto;
+				margin-top: 1%;
+				margin-bottom: 1%;
+				border-radius: 20px;
+				height: 35%;
+				text-align: center;
+				background-color: rgba(22,171,188,0.4);
+			}
+			/*pie de pagina*/
+			footer{
+				border-radius: 20px;
+				margin: auto;
+				margin-top: 1%;
+				margin-bottom: 1%;
+				height: 80px;
+				padding-top: 40px;
+				padding-right: 10px;
+				text-align: right;
+				background-color: rgba(255,47,47,0.4); 
+			}
+			/*galeria de imagenes*/
+			div{
+				background-color: rgba(255,255,255,0.4);
+				border-radius: 20px;
+				display: inline-block;
+				width: 80%;
+				vertical-align: top;
+			}
+			/*imagenes todas*/
+			img{
+				border-radius: 20px;
+				margin: auto;
+				width: 400px;
+				height:200px;
+				display: inline-block;
+			}
+			/*todos los h1 tendran esta configuracion*/
+			h1{
+				padding-top: 5%;
+				margin: auto;
+				margin-right: 55%;
+				color: #000000;
+				text-shadow: 2px 2px 2px #ffa500;
+				display: inline-block;
+				text-align: center;
+			}	
+			/*todos los h2 tendran esta configuracion*/
+			h2{
+				display: inline-block;
+				text-align: center;
+				text-shadow: 2px 2px 2px #ffa500;
+			}
+			li{
+				display: inline-block;
+				border: 1px solid #000;
+				padding: 5px 20px 5px 20px;
+				margin-top: 40px;
+			}
+			section{
+				background-color: rgba(255,255,255,0.4);
+				border-radius: 20px;
+				display: inline-block;
+				width: 60%;
+				vertical-align: top;
+			}
+			legend{
+				background-color: #3cb371; 
+			}
+			main{
+				border-radius: 20px;
+				background-color: rgba(255,47,47,0.4)
+				text-align: center;
+				padding: 10px;
+			}
+			fieldset{
+				background-color: rgba(0,0,0,0.4);
+				display: inline-block;
+				margin-left: 70%; margin-bottom: 5%;
+				border-radius: 20px;
+				border: solid 1px #000;
+			}
+			label{
+				background-color: #ffa500;
+				display: inline-block;
+			}
+			.itsolution{
+				border-radius: 20px;
+				margin: auto;
+				width: 130px;
+				height:60px;
+			}
+			/*imagen flecha del footer*/
+			.flecha{
+				border-radius: 20px;
+				margin: auto;
+				width: 60px;
+				height:60px;
+				display: inline-block;
+			}
+			/*selecciona todos los elementos de clase peque*/
+
+			.peque{
+				font-size: 1.0vw;
+			}
+			

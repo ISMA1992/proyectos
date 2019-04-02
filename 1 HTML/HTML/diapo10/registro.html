@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ejercicio1</title>
+	<style type="text/css">
+		form{
+			width: 58%;
+			display: inline-block;
+		}
+		label{
+			width: 35%;
+			display: inline-block;
+		}	
+			</style>
+</head>
+<body>
+	<form method="get" autocomplete="off">
+		<h1>User input form</h1>
+		<fieldset>
+			<legend>Personal particular</legend>
+				<label>Name:</label>
+				<input type="text" name="Name"/></br>
+				<label>Password:</label>
+				<input type="Password" name="pwd"/></br>
+				<label>Gender</label></br>
+				<input type="radio" name="sexo" value="H" checked="checked"/>
+				<label>Hombre</label>
+				<input type="radio" name="sexo" value="M"/>
+				<label>Mujer</label></br>
+				
+					<label>Age</label>
+				<select>
+					<option value="1">1 año viejo</option>
+					<option value="2">2 año viejo</option>
+					<option value="3">3 años viejo</option>
+					<option value="4">4 años viejo</option>
+				</select>
+		</fieldset>
+		<fieldset>
+			<legend>Instruction</legend>
+			<textarea rows="10" cols="40">Enter your instructionhere....</textarea>
+		</fieldset>
+	</form>
+	<form method="get" autocomplete="off">
+		<fieldset>
+		<legend>Datos personales</legend>
+			<label>Nombre:</label></br>
+			<input type="text" name="Nombre"/></br>
+			<label>Apellidos:</label></br>
+			<input type="text" name="Apellidos"/></br>
+			<label>DNI:</label></br>
+			<input type="text" name="DNI"/></br>
+			<label>Tu Email:</label></br>
+			<input type="email" placeholder="ingrese su email" name="email"></br>
+			<label>Teléfono:</label></br>
+			<input type="tel" placeholder="ingrese su telefono" name="telefono"></br>
+			<label>Indica tu sitio web</label></br>
+			<input type="url" name="web" placeholder="ingrese su sitio"></br>
+			<label>Buscar en Google</label></br>
+			<input type="search" name="googlesearch"></br>
+			<label>fecha y hora:</label></br>
+			<input type="datetime-local" name="fechahora"></br>
+			<label>fecha de nacimiento</label></br>
+			<input type="month" name="bdaymonth"></br>
+			<label>tu color favorito</label></br>
+			<input type="color" name="color" value="#ff0000"></br>
+			<label>pasteles</label></br>
+			<input type="range" name="points" min="0" max="10" step="1" value="5"></br>
+			<input type="text" list="provincias" name="provincias"></br>
+		<datalist id="provincias">
+				<option value="Barcelona">
+				<option value="Girona">
+				<option value="Lleida">
+				<option value="Tarragona">	
+		</datalist>
+			<button type="submit">SEND</button>
+			<button type="reset">CLEAR</button>		
+	</fieldset>
+	<h1>Formulario estructurado</h1>
+	<fieldset>
+		<legend>Datos de conexion</legend>
+		<label>Nombre de usuario</label></br>
+		<input type="text" name="Nombreusuario"/></br>
+		<label>Contraseña</label></br>
+		<input type="text" name="Contraseña"/></br>
+		<label>Repite la contraseña</label></br>
+		<input type="text" name="Contraseña"/></br>
+	</fieldset>
+	</form>
+
+</body>
+</html>

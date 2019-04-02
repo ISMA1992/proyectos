@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 3</title>
+</head>
+<body>
+	<script>
+		function cumple(n){
+			var hoy = new Date();
+			hoy.setHours(0,0,0,0);
+			n.setHours(0,0,0,0);
+			
+			var resul=hoy.getFullYear()-n.getFullYear();
+			n.setFullYear(hoy.setFullYear());
+
+			if (n > hoy){
+				 resul = n - hoy;
+				resul = parseInt(((((resul/1000)/60)/60)/24));
+				resultado.innerHTML ="Faltan "+ resul + " dias para tu cumpleaños.";
+
+			}else if (n.getTime() == hoy.getTime()){
+				resultado.innerHTML = "FELICIDADESSS!! HOY CUMPLES "+ resul +" !!! <br /> <img src='cumple.jpg' title='felicidades' />";
+			}	
+		}
+	</script>
+	<h1>CALCULA EL TIEMPO QUE QUEDA PARA TU FIESTA</h1>
+	<label>fecha nacimiento: </label>
+	<input type="date" id="num">
+	
+	<button onclick="cumple(num.valueAsDate);">CALCULA</button>
+	<span id="resultado"></span>
+</body>
+</html>

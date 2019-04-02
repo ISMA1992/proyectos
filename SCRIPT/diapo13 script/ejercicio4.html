@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 4</title>
+	<script>
+		alert("el dia del juicio final esta apunto de llegar calcula cuanto te queda!!!");
+			
+			var fin;
+			var intervalo;
+
+			function Atras(){
+				var dia = parseInt(document.getElementById('dia').value);
+				var mes = parseInt(document.getElementById('mes').value);
+				var any = parseInt(document.getElementById('año').value);
+				var hora = parseInt(document.getElementById('hora').value);
+				var min = parseInt(document.getElementById('minuto').value);
+				var seg = parseInt(document.getElementById('segundo').value);
+
+				var fechaActual = new Date();
+				fin = new Date(any, mes, dia, hora, min, seg, 0);
+				intervalo = setInterval(reloj, 500);
+			}
+
+			function reloj(){
+				var ahora = new Date();
+
+				if(ahora>fin){
+					alert('Ya has alcanzado la fecha prevista');
+					clearInterval(intervalo);
+				}else{
+					//Calculo los segundos que quedan para el FIN
+					var seg = parseInt((fin-ahora)/1000);
+
+					//Calcular los segundos, minutos y horas para el reloj
+					var segundos = seg%60;
+					var minutos = parseInt(seg/60)%60;
+					var horas = parseInt(seg/3600)%24;
+					var dias = parseInt(seg/86400);
+
+					//Poner 0 delante de los números menores de 10
+					if(segundos<10) segundos='0'+segundos;
+					if(minutos<10) minutos='0'+minutos;
+					if(horas<10) horas='0'+horas;
+
+					document.getElementById('dias').innerHTML = dias;
+					document.getElementById('horas').innerHTML = horas;
+					document.getElementById('minutos').innerHTML = minutos;
+					document.getElementById('segundos').innerHTML = segundos;
+				}
+			}
+	</script>
+</head>
+<body>
+	<h1>CUENTA ATRAS</h1>
+	<label>dia: </label>
+	<input type="number" id="dia"><br>
+	<label>mes: </label>
+	<input type="number" id="mes"><br>
+	<label>año: </label>
+	<input type="number" id="año"><br>
+	<label>hora: </label>
+	<input type="number" id="hora"><br>
+	<label>minutos: </label>
+	<input type="number" id="minuto"><br>
+	<label>segundos: </label>
+	<input type="number" id="segundo"><br>
+
+	<button onclick="Atras(parseInt(dia.value),parseInt(mes.value),parseInt(año.value),parseInt(hora.value),parseInt(minutos.value),parseInt(segundos.value)) ; ">CUENTA ATRAS</button><br>
+	DIAS: <span id="dias"></span><br>
+	HORAS: <span id='horas'>00</span>
+			<span id='minutos'>00</span>
+			<span id='segundos'>00</span><br>
+</body>
+</html>

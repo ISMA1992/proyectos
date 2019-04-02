@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>ejercicio5</title>
+	<script>
+		function calcular(){
+			var n1=parseInt(document.getElementById('num').value);
+			var res="";
+
+			for(let i=1; i<=10; i++){
+				res += n1*i + ",";
+				resultado.innerHTML=res;
+			}
+		}	
+	</script>
+</head>
+<body>
+		<fieldset>
+			<label>numero1: </label>
+			<input type="number" id="num">
+		</fieldset>
+			<button onclick="calcular();">Calcula</button>
+			<output id="resultado"></output>
+</body>
+</html>

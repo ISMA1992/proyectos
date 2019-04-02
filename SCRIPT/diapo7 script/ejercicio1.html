@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 1</title>
+	<script>
+		function minimo(){
+			var num1=parseInt(document.getElementById('numero1').value);
+			var num2=parseInt(document.getElementById('numero2').value);
+
+			if(num1<=num2){
+				alert('el numero mas pequeño es:'+num1);
+			}else if(num1>=num2){
+				alert('el numero mas pequeño es:'+num2);
+			}
+			
+		}
+	</script>
+	<style>
+		h1{
+			text-align: center;
+			color: #000;
+			text-shadow: 3px 3px 3px #00f;
+		}
+		fieldset{
+			background-color: rgba(255,255,0,0.3);
+		}
+	</style>
+</head>
+<body>
+	<h1>Numero menor</h1>
+	<fieldset>
+		<label>Numero1: </label>
+		<input type="number" id="numero1"/>
+		<label>Numero2: </label>
+		<input type="number" id="numero2"/><br><br>
+		<button onclick="minimo();">Presenta</button>
+	</fieldset>
+</body>
+</html>

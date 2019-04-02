@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 3</title>
+	<style>
+		h1{
+			color: #0000ff;
+			text-shadow: 3px 3px 3px #000000;
+		}
+	</style>
+	<script>
+		function calcular(){
+			var d = dni.value;
+			var resul = (d % 23); 
+
+			var num = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];
+
+			num = num[resul];
+			document.write(d+"-"+num);
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Entregame tu Nº DNI</h1>
+	<label>Dni: </label><br>
+	<input type="number" id="dni"><br>
+	<button onclick="calcular();">Calcula tu letra</button>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Goku Transformed</title>
+	<style>
+		h1{
+			text-align: center;
+			color: #000;
+			text-shadow: 3px 3px 3px #0000ff;
+		}	
+		section{
+			text-align: center;
+			background-image: url(imagenes/poder.jpg);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			height: 700px;
+			margin: auto;
+			border-radius: 20px;
+			border: solid 1px #0000ff;
+		}
+		img{
+			margin: auto 20px;
+			height: 100%;
+		}
+	</style>
+	<script>
+		var i=1;
+		function goku(){
+			imagengoku.src="imagenes/goku"+i+".png";
+
+			i++;
+			if (i==10){
+				i=0;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Tranfomaciones Goku</h1>
+	<section>
+		<img src="imagenes/goku0.png" id="imagengoku" onclick="goku();">
+	</section>
+</body>
+</html>

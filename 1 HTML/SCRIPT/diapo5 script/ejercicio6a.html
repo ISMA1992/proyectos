@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ejercicio 6a</title>
+	<script>
+		function calcular(){
+			var n1=parseFloat(document.getElementById('num1').value);
+			var n2=parseFloat(document.getElementById('num2').value);
+			var n3=parseFloat(document.getElementById('num3').value);
+
+			if (n1>n2){
+				if(n1>n3){
+					resultado.innerHTML=n1;
+				}else{
+					resultado.innerHTML=n3
+				}
+			}	
+			if (n2>n1){
+				if (n2>n3){
+					resultado.innerHTML=n2;
+				}else{
+					resultado.innerHTML=n3
+				}
+				}		
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Numero mayor</h1>
+	<input type="number" id="num1">numero1
+	<input type="number" id="num2">numero2
+	<input type="number" id="num3">numero3
+	<hr>
+
+	<button onclick="calcular()">Salto</button>
+	<output id="resultado"></output>
+</body>
+</html>

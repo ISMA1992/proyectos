@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ejercicio 10</title>
+	<style>
+	    body{
+	    	text-align: center;
+	    }
+		h1{
+			margin-left: 20px;
+			color: #0017FF;
+			text-shadow: 2px 2px 2px #9D9DA0;
+		}
+		section{
+			text-align: center;
+			width: 50%;
+			background-color: rgba(154, 214, 228,0.3);
+			border-radius: 25px ;
+			border: solid 1px;
+		}
+		input{
+			margin: 5px auto;
+		}
+		button{
+			margin: 5px auto;
+		}
+	</style>
+	<script>
+		var aleatorio=parseInt(Math.random()*128)+1;
+		var contador=0;
+
+		function calcular(){
+			var num=parseInt(document.getElementById('numero').value);
+
+			if(aleatorio==num){
+				alert('Numero correcto');
+			}else if (aleatorio>num){
+				document.getElementById('resultado').innerHTML=++contador;
+				alert('El numero introducido es menor');
+			}else if (aleatorio<num){
+				document.getElementById('resultado').innerHTML=++contador;
+				alert('El numero introducido es mayor');
+			}	
+			if (contador==7){
+				alert('De verdad que eres muuuuuuu tonto');
+			}else{
+	
+			}
+		}
+		function resetar(){
+			contador=0;
+			document.getElementById('resultado').innerHTML=contador;
+			document.getElementById('numero').value="";
+		}
+	</script>
+</head>
+<body>
+	<section>
+			<h1>Adivina el numero</h1><br><br>
+			<span>Numero:</span><br>
+			<input type="number" id="numero"><br><br>
+			<button onclick="calcular();">Prueba</button><br>
+			<button onclick="resetar();">Reset</button><br>
+			<span id="resultado"></span>
+	</section>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Crea una pagina web dinamica web </title>
+	<script>
+		function crear(){
+			var h = document.createElement('h1');
+			var text = document.createTextNode('Esto es una pagina web Gremliniana');
+			var atributo = document.createAttribute('class');
+			atributo.value = "importante";
+			var image = document.createElement('img');
+			 image.src="Gremlin.png";
+
+			 var fig = document.createElement('figure');
+			 var tex = document.createTextNode('Bienvenido a mi pagina Web');
+			 var atribut = document.createAttribute('class', 'foto');
+			 var figca = document.createElement('figcaption');
+			
+			h.setAttributeNode(atributo);
+			h.appendChild(text);
+			fig.appendChild(image);
+			fig.appendChild(figca);
+			image.setAttributeNode(atribut);
+			figca.appendChild(tex);
+			
+			document.body.appendChild(h);
+			document.body.appendChild(fig);
+		}
+	</script>
+</head>
+<body>
+	<button onclick="crear();">CREA WEB DINAMICA</button>
+</body>
+</html>

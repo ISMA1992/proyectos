@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Cambia imagenes</title>
+	<style>
+		body{
+			text-align: center;
+			background-color: rgb(4, 84, 169);
+		}
+		img{
+			margin-top: 350px;
+			width: 40%;
+		}	
+	</style>
+</head>
+<body style="transition: 1s;">
+	<img src="dodge.jpg">
+	<script>
+		var fotos = ['dodge.jpg','astonmartin.png','bmw.png','chevrolet.png','golfito.jpg','mustang.png','nissan.png','toyota.png'];
+		var i=1;
+
+		setInterval(function(){
+			document.body.firstElementChild.src = fotos[i];
+			i++;
+			if(i==fotos.length)
+				i=0;
+		}, 5000);
+	</script>
+</body>
+</html>

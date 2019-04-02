@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ejercicio script 2</title>
+	<script>
+		function area(){
+			var a=document.getElementById('altura').value;
+			var b=document.getElementById('base').value;
+
+			area=(b*a)/2;
+
+			document.getElementById('resultado').innerHTML=area;
+		}
+	</script>
+</head>
+<body>
+	<h1>Calcula el area de un triangulo</h1>
+	<label>altura:</label>
+	<input type="number" id="altura">
+	<label>base:</label>
+	<input type="number" id="base">
+	
+	<button onclick="area();">AREA</button>
+	<hr>
+	<span id="resultado">0</span><br>
+	<img src="triangulo.png" width="200" height="200">
+</body>
+</html>

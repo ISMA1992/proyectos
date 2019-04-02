@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>ejercicio 5</title>
+	<style>
+		h1{
+			color: #0000ff;
+			text-shadow: 3px 3px 3px #454646;
+		}
+	</style>
+	<script>
+		function ordenar(){
+			var nom = nombre.value.toLowerCase();
+			var ape1 = apellido1.value.toUpperCase();
+			var ape2 = apellido2.value.toUpperCase();
+			
+
+			var espacio = nom.search(' ');
+
+			nom = nom.trim();
+
+			nom = nom[0].toUpperCase() + nom.slice(1, espacio)+' '+
+			nom[espacio+1].toUpperCase() + nom.slice(espacio+2);
+			
+
+			alert(ape1+' '+ape2+', '+nom);
+
+		}
+	</script>
+</head>
+<body>
+	<h1>Apellidos y Nombre</h1>
+
+	<label>Nombre: </label>
+	<input type="text" id="nombre">
+	<label>Apellido1: </label>
+	<input type="text" id="apellido1">
+	<label>Apellido2: </label>
+	<input type="text" id="apellido2"><br><br>
+	<button onclick="ordenar();">Ordena tu nombre</button>
+</body>
+</html>

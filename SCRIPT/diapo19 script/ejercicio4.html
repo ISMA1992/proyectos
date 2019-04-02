@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>El juego de los dados</title>
+	<style>
+		body{
+			text-align: center;
+			background-image: url(imagenes/casino.jpg);
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+		h1{
+			color: #ffffff;
+			text-shadow: 3px 3px 3px #0000ff;
+			text-align:center; 
+		}
+		figure{
+			width: 100px;
+			display: inline-block;
+		}
+		img{
+			border-radius: 15px;
+			width: 100%;
+		}
+		div{
+			border-radius: 50px;
+			margin: 100px 200px;
+			background-color: rgba(255,255,255,0.5);
+			text-align: center;
+			width: 500px;
+			display: inline-block;
+			box-shadow: 3px 3px 3px #000000;
+		}
+		.divi{
+			border: solid 1px;
+			width: 200px;
+		}
+		button{
+			margin: 10px auto;
+			border-radius: 20px;
+			box-shadow: 3px 3px 3px #000000;
+			background-color: rgba(0,0,255,0.5);
+		}
+	</style>
+	<script>
+		var tirada = 0;
+		var creditos = 10;
+		var acertadas = 0;
+		var falladas= 0;
+		var record= 0;
+		function jugar(apo,mas,menos){
+			tirada++;
+			var aleatorio = Math.floor((Math.random()*6)+1);
+			document.getElementById('dado').innerHTML = "<img src='imagenes/dado"+aleatorio+".png' />";
+			var aleatorio2 = Math.floor((Math.random()*6)+1);
+			document.getElementById('dado2').innerHTML = "<img src='imagenes/dado"+aleatorio2+".png' />";
+			
+			var suma=aleatorio+aleatorio2;
+
+			if(suma==7){
+				document.getElementById('resultado').innerHTML = "El resultado es "+suma+"<br>"+"HAS EMPATADO"+"<br>"+"You TIE";
+			}else{
+				if(mas.checked){
+					if(suma>7){
+						document.getElementById('resultado').innerHTML = "El resultado es "+suma+"<br>"+"HAS GANADO"+"<br>"+"You Winner";
+						acertadas++;
+						creditos=apo+creditos;
+					}else{
+						document.getElementById('resultado').innerHTML = "El resultado es "+suma+"<br>"+"HAS Fallado"+"<br>"+"Game Over";
+						falladas++;
+						creditos=creditos-apo;
+					}
+					
+					}else{
+					if(suma<7){
+						document.getElementById('resultado').innerHTML = "El resultado es "+suma+"<br>"+"HAS GANADO"+"<br>"+"You Winner";
+						acertadas++;
+						creditos=apo+creditos;
+					}else{
+						document.getElementById('resultado').innerHTML = "El resultado es "+suma+"<br>"+"HAS Fallado"+"<br>"+"Game Over";
+						falladas++;
+						creditos=creditos-apo;
+					}
+				}
+				document.getElementById('creditos').innerHTML =creditos;
+				document.getElementById('tiradas').innerHTML =tiradas;
+				document.getElementById('acertadas').innerHTML =acertadas;
+				document.getElementById('falladas').innerHTML =falladas;
+				document.getElementById('tiradas').innerHTML =tirada;
+				document.getElementById('record').innerHTML =acertadas;
+			}
+		}	
+	</script>
+</head>
+<body>
+	<h1>EL JUEGO DE LOS DADOS</h1>
+	<div class="divi">	
+		<h2>Estadísticas</h2>
+		Creditos: <span id="creditos">10</span><br>
+		Tiradas: <span id="tiradas">0</span><br>
+		Acertadas: <span id="acertadas">0</span><br>
+		Falladas: <span id="falladas">0</span><br>
+		Record: <span id="record">0</span><br>
+		<h2>Apuesta</h2>
+		Juegas <select id="apostar">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			</select><br><br>
+		<input type="radio" name="tirada" id="mas">Más de 7
+		<input type="radio" name="tirada" id="menos">Menos de 7<br><br>
+		<button onclick="jugar(parseInt(apostar.value), mas, menos);">TIRA LOS DADOS</button>
+	</div>
+	<div >
+		<h3>Resultado</h3>
+		<figure id="dado"></figure>
+		<figure id="dado2"></figure><br>
+		<span id="resultado"></span>
+	</div>
+</body>
+</html>

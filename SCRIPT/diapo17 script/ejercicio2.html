@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 2 cambio</title>
+	<script>
+		function cambiar(){
+			document.body.firstElementChild.innerHTML = "GATO!";		
+		}
+		function cambio(){
+			var li = document.getElementsByTagName("li");
+			
+			for(let i = 0; i < li.length; i++){
+				li[i].style.color = "#00f";
+			} 
+		}	
+		function ima(){
+			document.images[0].src='gatob.jpg';
+			document.images[0].title='el gato bailarin';
+		
+		} 
+	</script>
+</head>
+<body>
+	<h1>CATS!</h1>
+	<img src="gato.jpg" title="Gato_ludopata">
+	<p>So cute!</p>
+	<ul>
+		<li>Lizzie</li>
+		<li>Daemon</li>
+	</ul>
+	<button onclick="cambiar(); cambio(); ima();">HAZ UN CAMBIO</button>
+</body>
+</html>

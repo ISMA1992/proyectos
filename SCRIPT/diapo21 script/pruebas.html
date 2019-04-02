@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Pruebas script</title>
+</head>
+<body>
+	<p>Latitud: <output id="latitud"></output></p>
+	<p>Longitud: <output id="latitud"></output></p>
+	<p>Precisión de: <output id="latitud"></output>metros</p>
+	<script>
+		var options = new Object();
+		opstions.enableHighAccuracy=true;
+		options.timeout=5000;
+
+		function exito(pos){
+			latitud.innerHTML=pos.coords.latitude;
+			longitud.innerHTML=pos.coords.longitude;
+			precision.innerHTML=pos.coords.accurcy;
+		}
+		function error(err){
+			alert('ERROR('+err.code+'):'+err.message);
+		}
+		navigator.geolocation.getCurrenPosition(exito, error, options);
+	</script>
+</body>
+</html>

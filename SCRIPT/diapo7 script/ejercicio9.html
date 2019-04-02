@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio9</title>
+	<script>
+		function escalar(elemento, valor){
+				elemento.height*=valor;
+				elemento.width*=valor;
+		}
+		function colorear(elemento,color){
+			elemento.style.backgroundColor=color;
+		}
+	</script>
+	<style>
+		h1{
+			text-align: center;
+			color: #000;
+			text-shadow: 3px 3px 3px #00f;
+		}
+		figure{
+			display: inline-block;
+			margin: auto;
+			
+		}
+		img{
+			padding: 50px 50px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Galeria coloreada</h1>
+		<span>Color: </span><br>
+		<input type="color" id="incolor" value="#ff0000" /><br><br>
+	<article>	
+		<figure onclick="colorear(this, incolor.value);">
+			<img src="goku.jpg" onmouseenter="escalar(this, 1.3);" onmouseleave="escalar(this, 0.769); " width="200" height="150">
+		</figure >
+		<figure onclick="colorear(this, incolor.value);">
+			<img src="goku2.jpg" onmouseenter="escalar(this, 1.3);" onmouseleave="escalar(this, 0.769);" width="200" height="150">
+		</figure>
+		<figure onclick="colorear(this, incolor.value);">
+			<img src="goku3.jpg" onmouseenter="escalar(this, 1.3);" onmouseleave="escalar(this, 0.769);" width="200" height="150">
+		</figure>
+		<figure onclick="colorear(this, incolor.value);">
+			<img src="goku4.jpg" onmouseenter="escalar(this, 1.3);" onmouseleave="escalar(this, 0.769);" width="200" height="150">
+		</figure>
+		<figure onclick="colorear(this, incolor.value);">
+			<img src="goku5.jpg" onmouseenter="escalar(this, 1.3);" onmouseleave="escalar(this, 0.769);" width="200" height="150">
+		</figure>
+	</article>	
+</body>
+</html>

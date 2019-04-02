@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 4</title>
+	<script>
+				
+				function calcular(){
+					var r=document.getElementById('radio').value;
+					var PI=3.1416;
+					var area = PI*(r*r);
+					var perimetro = 2*PI*r;
+					var diametro = 2*r;
+					var op=document.getElementById('operacion').value;
+
+					if (op=='perimetro'){
+						document.getElementById('resultado').innerHTML=perimetro.toFixed(2);
+					}
+					else if (op=='area'){
+						document.getElementById('resultado').innerHTML=area.toFixed(2);
+					}
+					else if (op=='diametro'){
+						document.getElementById('resultado').innerHTML=diametro.toFixed(2);
+					}else{
+						alert("eres idiota no me has dado opcion")
+					}
+				}		
+	</script>
+</head>
+<body>
+	<h1>Calcular el area</h1>
+	<label>Radio</label>
+	<input type="number" id="radio">
+	<select id="operacion">
+		<option value="perimetro">perimetro</option>
+		<option value="area">area</option>
+		<option value="diametro">diametro</option>
+		<option value="---">----</option>
+	</select>
+
+	<button onclick="calcular()">Calcula</button>
+	<hr>
+
+	<span>RESULTADO:</span>
+	<span id="resultado">0</span><br>
+</body>
+</html>

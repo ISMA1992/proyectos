@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Piedra, Papel y Tijera</title>
+	<style>
+		html{
+			background-color: rgb(106, 146, 251);
+		}
+		/*titulos 1 y 2*/
+		h1{
+			text-align: center;
+			color: #000;
+			text-shadow: 3px 3px 3px #4698F7;
+		}
+		h2{
+			color: #0000ff;
+			text-shadow: 3px 3px 3px #32AD62;
+			margin: 50px auto;
+		}
+		/*todos los figure*/
+		figure{
+			border: solid 1px #0000ff;
+			border-radius: 15px;
+			background-color: rgb(218, 242, 250);
+			box-shadow: 4px 4px 4px #676768;
+			display: inline-block;
+			margin: 15px 15px;	
+		}
+		figcaption{
+			margin: auto 100px;
+		}
+		/*contenedor section*/
+		section{
+			background-color: rgb(238, 236, 236);
+			height: 700px;
+			position: relative;
+			text-align: center;
+			border: solid 1px;
+		}
+		article:nth-of-type(2){
+			position: absolute;
+			bottom: 0; left: 0;
+		}
+		article:nth-of-type(3){
+			position: absolute;
+			bottom: 2; right: 0;
+		}
+		article span{
+			color: #000000;
+			text-shadow: 3px 3px 3px #04FF00;
+		}
+
+	</style>
+
+	<script>
+			var victorias = 0;
+			var empates = 0;
+			var derrotas = 0;
+			var tiradas= 0;
+
+		function tirada(Jugador){
+			tiradas++;
+			document.getElementById('imagenJugador').src= "imagenes/"+Jugador+".png";
+			var CPU = parseInt(Math.random()*3);
+		
+			switch (CPU){
+				case 0: 
+					CPU = "piedra";
+						break;
+				case 1:
+					CPU = "papel";
+						break;
+				case 2:
+					CPU = "tijeras";
+						break;	
+			} 	
+				
+				document.getElementById('imagenCPU').src= "imagenes/"+CPU+".png";	
+
+			if (Jugador=="piedra" && CPU=="tijeras" || Jugador=="papel" && CPU=="piedra" || Jugador=="tijeras" && CPU=="papel"){
+
+				document.getElementById('resultado').innerHTML= 'Winner';
+				victorias++;
+				resultado.style.fontSize="7vw";
+				resultado.style.color="#3AFF00";
+
+			}else if (CPU=="piedra" && Jugador=="tijeras" || CPU=="papel" && Jugador=="piedra" || CPU=="tijeras" && Jugador=="papel"){
+
+				document.getElementById('resultado').innerHTML= 'Failed';
+				derrotas++;
+				resultado.style.fontSize="7vw";
+				resultado.style.color="#FF0000";
+
+			}else{
+
+				document.getElementById('resultado').innerHTML= 'Tie';
+				empates++;
+				resultado.style.fontSize="7vw";
+				resultado.style.color="#0046FF";
+			}
+				document.getElementById('tiradas').innerHTML= tiradas;
+				document.getElementById('victorias').innerHTML= victorias;
+				document.getElementById('derrotas').innerHTML= derrotas;
+				document.getElementById('empates').innerHTML= empates;
+		}
+	</script>
+	
+</head>
+<body>
+	
+	<section>
+			<h1>Juega a piedra papel o tijera</h1>
+		<article>
+			<figure>
+				<figcaption>Jugador 1</figcaption>
+				<img src="imagenes/blanco.png" class="imgJugador" id="imagenJugador" width="250" height="175">
+			</figure>
+			<figure>
+				<figcaption>CPU</figcaption>
+				<img src="imagenes/blanco.png" class="imgCPU" id="imagenCPU" width="250" height="175">
+			</figure>
+		</article>	
+			<span id="resultado"></span>
+		<article>
+			<h2>Selecciona tirada</h2>
+			<figure>
+				<figcaption>Piedra</figcaption>
+				<img src="imagenes/piedra.png" width="175" height="150" onclick="tirada('piedra');">
+			</figure>
+			<figure>
+				<figcaption>Papel</figcaption>
+				<img src="imagenes/papel.png" width="175" height="150" onclick="tirada('papel');">
+			</figure>
+			<figure>
+				<figcaption>Tijera</figcaption>
+				<img src="imagenes/tijeras.png" width="175" height="150" onclick="tirada('tijeras');">
+			</figure>
+		</article>
+		<article>
+					<h2>Estadísticas</h2>
+				Partidas: <span id="tiradas"> </span><br>
+				Ganadas: <span id="victorias"> </span><br>
+				Perdidas: <span id="derrotas"></span><br>
+				Empatadas: <span id="empates"></span><br>
+		</article>
+	</section>
+</body>
+</html>

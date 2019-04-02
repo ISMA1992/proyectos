@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Prueba Color</title>
+	<script>
+		function colorea(elemento,color){
+			elemento.style.backgroundColor = color;
+		}
+	</script>
+	<style>
+		div{
+			display: inline-block;
+			border: solid 1px;
+			width: 50px;
+			height: 50px;
+		}
+		p{
+			color: #00f;
+			text-shadow: 2px 2px 2px #0f0;
+		}
+		h1{
+			color: #000;
+			text-shadow: 2px 2px 2px #00f;
+		}
+		span{
+			color: #ff0;
+			text-shadow: 2px 2px 2px #f00;
+		}
+	</style>
+</head>
+<body>
+	<h1>Colorea</h1>
+	<p>Selecciona un color y haz click en los div</p>
+
+	<span>Color: </span>
+	<input type="color" id="incolor" value="#ff0000" />
+
+	<div onclick="colorea(this, incolor.value);"></div>
+	<div onclick="colorea(this, incolor.value);"></div>
+	<div onclick="colorea(this, incolor.value);"></div>
+
+	<button onclick="colorea(document.body, incolor.value);">Colorea Body</button>
+</body>
+</html>

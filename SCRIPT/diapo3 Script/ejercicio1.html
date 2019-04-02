@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ejercicio script 1</title>
+	<script>
+		function perimetro(){
+			var r=document.getElementById('radio').value;
+			var PI=3.1416;
+
+			var perimetro = 2*PI*r;
+			
+			document.getElementById('resultado').innerHTML= perimetro;
+		}	
+		function area(){
+			var r=document.getElementById('radio').value;
+			var PI=3.1416;
+
+			var area = PI*r*r;
+
+			document.getElementById('resultado').innerHTML= area;
+		}	
+		function diametro(){
+			var r=document.getElementById('radio').value;
+			var PI=3.1416;
+
+			var diametro = 2*r;
+
+			document.getElementById('resultado').innerHTML= diametro;
+		}	
+	</script>
+</head>
+<body>
+	<h1>Calcular el area</h1>
+	<label>Radio</label>
+	<input type="number" id="radio">
+	<button onclick="perimetro();">Perimetro</button>
+	<button onclick="area();">Area</button>
+	<button onclick="diametro();">Diametro</button>
+	<hr>
+
+	<span>RESULTADO:</span>
+	<span id="resultado">0</span><br>
+	<img src="circunferencia.png" width="400" height="400">
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Alert espam anuancio</title>
+</head>
+<body>
+	<button onclick="cerrar();" id="ventana">Cierra el popup</button>
+<script>
+
+		var intervalo = setInterval(publicidad, 2000);
+		var publi= [];
+		function publicidad(){
+		publi.push(window.open("http://www.lucapc.es","","width=300,height=300, scrollbars=1"));
+
+		}
+
+		function cerrar(){
+		   clearInterval(intervalo);
+		 	for (let i = 0; i < publi.length; i++) {
+		 		publi[i].close();
+		 	}
+		}
+</script>
+</body>
+</html>

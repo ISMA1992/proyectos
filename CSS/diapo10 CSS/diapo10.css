@@ -1,0 +1,23 @@
+figure{
+	width: 200px;
+	border: dashed 2px;
+	margin: 10px;
+	padding: 10px;
+	display: inline-block;
+}
+figure img{
+	width: 50%;
+	display: inline-block;
+}
+figure:first-of-type{
+	margin: 10px auto;
+	text-align: center;
+}
+figure:nth-of-type(2) img{
+	display: block;
+	margin: auto;
+}
+div{
+	width: auto; height: auto;
+	border: solid 1px #000;
+}

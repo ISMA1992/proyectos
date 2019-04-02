@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Probando las propiedades</title>
+	<style>
+		/*cambiar las caracteristicas de un texto u objeto*/
+		.grnde{font-size: 2vw;}
+		.azul{color: #0000ff;}
+		.cursiva{font-style: italic;}
+		/*visor imagen*/
+		#visor{height: 300px; width: 300px; overflow: scroll;}
+		/*contenedores de colores subir()*/
+		div{height: 100px; width: 100px; margin: 10px;}
+		#d1{background-color: #ff0000;}
+		#d2{background-color: #0000ff;}
+		#d3{background-color: #00ff00;}
+	</style>
+	<script>
+		// elimina el primer contenido de tu pagina 
+		function eliminar(){
+			document.body.children[0].remove();
+		}
+		// crea contenido en tu pagina
+		function crear(){
+			var h = document.createElement('h1');
+			var text = document.createTextNode('esto es un H1');
+			var atributo = document.createAttribute('class');
+			atributo.value = "importante";
+			var c = document.createComment('Comentario en html');
+
+			h.setAttributeNode(atributo);
+			h.appendChild(text);
+			document.body.appendChild(h);
+			document.body.appendChild(c);
+		}
+		// aplica y elimina caracteristicas
+		function aplicar(elemento,clase){
+			elemento.classList.add(clase);
+		}
+
+		function eliminar2(elemento,clase){
+			elemento.classList.remove(clase);
+		}
+		// centra una imagen
+		function actualizar(){
+			info.innerHTML=visor.scrollTop+'-'+visor.scrollLeft;
+		}
+
+		function centrar(){
+			visor.scrollTop=100;
+			visor.scrollLeft=100;
+		}
+		// clona una imagen y la devuelve a su estado original
+		function clonar(figura){
+			var clonf=figura.cloneNode();
+			var cloni=figura.children[0].cloneNode();
+
+			clonf.setAttribute('class','grande');
+			clonf.onclick = function(){this.remove();}
+			clonf.appendChild(cloni);
+
+			document.body.appendChild(clonf);
+		}
+		// sube el contenedor
+		function subir(el){
+			if(el!=el.parentElement.children[0])
+				el.parentElement.insertBefore(el, el.parentElementSibling);
+			else
+				el.parentElement.appendChild(el);
+		}
+		// recorre el objeto concreto
+		function imprimir(){
+			
+			var image = document.createElement('img');
+			var resul = '';
+
+			for(let imag in image){
+				resul += imag+': '+image[imag]+'<br>';
+				
+			}
+
+			document.getElementById('resultado').innerHTML = resul ;
+		}	
+		</script>
+</head>
+<body>
+			<p>Parrafo 1</p>
+			<p>Parrafo 2</p>
+			<p>Parrafo 3</p>
+		<button onclick="eliminar();">ELIMINAR</button>
+	<hr>
+				<p id="par">Prueba a cambiar mis caracteristicas</p>
+			<select id="sel">
+				<option value="grnde">GRANDE</option>
+				<option value="azul">AZUL</option>
+				<option value="cursiva">CURSIVA</option>
+			</select>
+		<button onclick="aplicar(par, sel.value);">APLICA CAMBIOS</button>
+		<button onclick="eliminar2(par, sel.value);">ELIMINA CAMBIOS</button>
+	<hr>
+			<figure id="visor" onscroll="actualizar();">
+				<img src="marvel0.png" height="400" width="400">
+			</figure>
+				<p id="info"></p>
+		<button onclick="centrar();">CENTRAR</button>
+	<hr>
+			<figure onclick="clonar(this);">
+				<img src="Gremlin.png">
+			</figure>
+	<hr>
+			<div id="parrafos">
+				<p onclick="this.parentNode.removeChild(this);">HOLA</p>
+				<p onclick="this.parentNode.removeChild(this);">SOY TU PEOR</p>
+				<p onclick="this.parentNode.removeChild(this);">Pesadilla!!</p>
+			</div>
+	<hr>
+			<div id="d1" onclick="subir(this);"></div>
+			<div id="d2" onclick="subir(this);"></div>
+			<div id="d3" onclick="subir(this);"></div>
+	<hr>
+		<button onclick="crear();">CREA CONTENIDO</button>
+	<hr>
+			<h3 id="resultado"></h3>
+		<button onclick="imprimir();">IMPRIME DATOS</button>
+</body>
+</html>

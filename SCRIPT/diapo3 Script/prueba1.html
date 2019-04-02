@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>prueba1 script</title>
+	<script>
+		function sumar(){
+			//recuperar los valores que necesitamos
+			var n1=parseFloat(numero1.value);
+			var n2=parseFloat(numero2.value);
+			var n3=parseFloat(numero3.value);
+			var n4=parseFloat(numero4.value);
+			//realizar cálculo
+			var calculo=n1+n2+n3+n4;
+
+			//mostrar resultado
+			resultado.innerHTML=calculo;
+		}
+		function restar(){
+			//recuperar los valores que necesitamos
+			var n1=parseFloat(numero1.value);
+			var n2=parseFloat(numero2.value);
+			var n3=parseFloat(numero3.value);
+			var n4=parseFloat(numero4.value);
+			//realizar cálculo
+			var calculo=n1-n2-n3-n4;
+
+			//mostrar resultado
+			resultado.innerHTML=calculo;
+		}
+		function multiplicar(){
+			//recuperar los valores que necesitamos
+			var n1=parseFloat(numero1.value);
+			var n2=parseFloat(numero2.value);
+			var n3=parseFloat(numero3.value);
+			var n4=parseFloat(numero4.value);
+			//realizar cálculo
+			var calculo=n1*n2*n3*n4;
+
+			//mostrar resultado
+			resultado.innerHTML=calculo;
+		}
+		function dividir(){
+			//recuperar los valores que necesitamos
+			var n1=parseFloat(numero1.value);
+			var n2=parseFloat(numero2.value);
+			var n3=parseFloat(numero3.value);
+			var n4=parseFloat(numero4.value);
+			//realizar cálculo
+			var calculo=n1/n2/n3/n4;
+
+			//mostrar resultado
+			resultado.innerHTML=calculo;
+		}
+	</script>
+</head>
+<body>
+	<h1>Calcular</h1>
+	<span>Numero1:</span>
+	<input type="number" id="numero1" value="0"/><br>
+
+	<span>Numero2:</span>
+	<input type="number" id="numero2" value="0"/><br>
+
+	<span>Numero3:</span>
+	<input type="number" id="numero3" value="0"/><br>
+
+	<span>Numero4:</span>
+	<input type="number" id="numero4" value="0"/><br>
+
+	<button onclick="sumar();">SUMAR</button>
+	<button onclick="restar();">RESTAR</button>
+	<button onclick="multiplicar();">MULTIPLICAR</button>
+	<button onclick="dividir();">DIVIDIR</button><br>
+	<hr>
+
+	<span>RESULTADO:</span>
+	<output id="resultado">0</output>
+</body>
+</html>

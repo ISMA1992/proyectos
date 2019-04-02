@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>grid</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			padding: 10px;
+			border: dashed 1px #00f;
+		}
+
+		div{
+			text-align: center;
+			border: solid 1px #790F0B;
+			padding: 20px;
+		}
+		div:nth-of-type(1){
+			background-color: #F8E2BA;
+		}
+		div:nth-of-type(2){
+			background-color: #E749FA;
+		}
+		div:nth-of-type(3){
+			background-color: #F2F9A9;
+		}
+		div:nth-of-type(4){
+			background-color: #FFDC01;
+		}
+		div:nth-of-type(5){
+			background-color: #DEE2DD;
+		}
+		div:nth-of-type(6){
+			background-color: #C6F8BA;
+		}
+		.grid-container{
+			display: grid;
+			grid-template-columns: 20% 20% 20%;
+			height: 200px;
+			grid-template-rows: 50px 100px;
+			justify-content: space-around;
+			align-content: space-around;
+			grid-gap: 5px;
+		}
+	</style>
+</head>
+<body class="grid-container">
+		<div>Hello</div>
+		<div>HI</div>
+		<div>Stupid</div>
+		<div>Maica</div>
+		<div>Cablon</div>
+		<div>SE Colio</div>
+</body>
+</html>

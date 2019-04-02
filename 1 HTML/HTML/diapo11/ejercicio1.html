@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio1</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<form method="post" autocomplete="off">
+		<h2>ejercicioA</h2>
+		<fieldset>
+			<input type="hidden" name="login" value="1">
+			<label>DNI</label>
+			<input type="text" name="dnilogin" required="required" pattern="^[\dXYZ] \d{7} [A-Z]$" maxlength="9" title="DNI valido"/></br>
+			<label>CLAVE</label>
+			<input type="password" name="passwordlogin" required="required" pattern="^\w{8,16}$"
+			title="8 a 16 caracteres alfanumericos"/></br>
+			<input type="submit" name="Acceder">
+	</form>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Piedra, Papel y Tijera Big Bang</title>
+	<style>
+		html{
+			background-color: rgb(106, 146, 251);
+		}
+		/*titulos 1 y 2*/
+		h3{
+			text-align: center;
+			color: #f00;
+			text-shadow: 3px 3px 3px #000000;
+		}
+		h2{
+			color: #0000ff;
+			text-shadow: 3px 3px 3px #32AD62;
+		}
+		article span{
+			color: #000000;
+			text-shadow: 3px 3px 3px #04FF00;
+		}
+		/*todos los figure*/
+		figure{
+			border: solid 1px #0000ff;
+			border-radius: 15px;
+			background-color: rgb(218, 242, 250);
+			box-shadow: 4px 4px 4px #676768;
+			display: inline-block;
+			margin-left: 50px;	
+		}
+		figure img{
+			margin: 5px 5px;
+			border-radius: 20px;
+		}
+		/*contenedor section*/
+		section{
+			background-color: rgb(238, 236, 236);
+			height: 800px;
+			position: relative;
+			text-align: center;
+			border: solid 1px;
+			border-radius: 20px;
+		}
+		article:nth-of-type(1){
+			position: absolute;
+			top: 10; 
+		}
+		article:nth-of-type(2){
+			position: absolute;
+			bottom: 0; left: 0;
+		}
+
+		fieldset{
+			margin:  auto 100px;
+			display: inline-block;
+		}
+	</style>
+
+	<script>
+			var victorias = 0;
+			var empates = 0;
+			var derrotas = 0;
+			var tiradas= 0;
+			var ganadas= 0;
+			var perdidas= 0;
+
+		function tirada(Jugador){
+			tiradas++;
+			document.getElementById('imagenJugador').src= "imagenes/"+Jugador+".png";
+			var CPU = parseInt(Math.random()*5);
+		
+			switch (CPU){
+				case 0: 
+					CPU = "piedra1";
+						break;
+				case 1:
+					CPU = "papel1";
+						break;
+				case 2:
+					CPU = "tijera";
+						break;	
+				case 3:
+					CPU = "lagarto";
+						break;
+				case 4:
+					CPU = "spock";
+						break;				
+			} 	
+				
+				document.getElementById('imagenCPU').src= "imagenes/"+CPU+".png";	
+
+			if (Jugador=="piedra1" && CPU=="tijera" || Jugador=="piedra1" && CPU=="lagarto" || Jugador=="papel1" && CPU=="piedra1" || Jugador=="papel1" && CPU=="spock" || Jugador=="tijera" && CPU=="papel1" || Jugador=="tijera" && CPU=="lagarto"){
+
+				document.getElementById('resultado').innerHTML= 'Winner';
+				victorias++;
+				ganadas++;
+				resultado.style.fontSize="7vw";
+				resultado.style.color="#3AFF00";
+
+			}else if (CPU=="piedra1" && Jugador=="tijera" || CPU=="piedra1" && Jugador=="lagarto" || CPU=="papel1" && Jugador=="piedra1" || CPU=="papel1" && Jugador=="spock" || CPU=="tijera" && Jugador=="papel1" || CPU=="tijera" && Jugador=="lagarto"){
+
+				document.getElementById('resultado').innerHTML= 'Failed';
+				derrotas++;
+				perdidas++;
+				resultado.style.fontSize="7vw";
+				resultado.style.color="#FF0000";
+
+			}else{
+
+				document.getElementById('resultado').innerHTML= 'Tie';
+				empates++;
+				resultado.style.fontSize="7vw";
+				resultado.style.color="#0046FF";
+			}
+				document.getElementById('perdidas').innerHTML= perdidas;
+				document.getElementById('victorias').innerHTML= victorias;
+				document.getElementById('derrotas').innerHTML= derrotas;
+				document.getElementById('empates').innerHTML= empates;
+				document.getElementById('ganadas').innerHTML= ganadas;
+		}
+	</script>
+	
+</head>
+<body>
+	
+	<section>
+			<img src="imagenes/bigbang.png">
+			<h1>Piedra, Papel, Tijeras, Lagarto, Spock</h1>
+		<article>
+			<figure>
+				<img src="imagenes/leonar.png" width="180" height="150">
+				<img src="imagenes/interrogantes.png" id="imagenJugador" width="180" height="150">
+				<figcaption>Jugador 1</figcaption>
+			</figure>
+					<fieldset>
+							<h2>Estadísticas</h2><br>
+						Partidas Ganadas: <span id="victorias">0</span><br>
+						Partidas Perdidas: <span id="perdidas">0</span><br>
+						Jugadas Ganadas: <span id="ganadas">0</span><br>
+						Jugadas Perdidas: <span id="derrotas">0</span><br>
+						Jugadas empatadas: <span id="empates">0</span><br>
+					</fieldset>	
+			<figure>
+				<img src="imagenes/interrogantes.png" id="imagenCPU" width="180" height="150">
+				<img src="imagenes/shieldon.png" width="180" height="150">
+				<figcaption>Shieldon</figcaption>
+			</figure>
+		</article><br>	
+			<span id="resultado"></span><br>
+		<article>
+			<h3>Selecciona tirada</h3>
+			<figure>
+				<figcaption>Piedra</figcaption>
+				<img src="imagenes/piedra1.png" width="165" height="150" onclick="tirada('piedra1');">
+			</figure>
+			<figure>
+				<figcaption>Papel</figcaption>
+				<img src="imagenes/papel1.png" width="165" height="150" onclick="tirada('papel1');">
+			</figure>
+			<figure>
+				<figcaption>Tijera</figcaption>
+				<img src="imagenes/tijera.png" width="165" height="150" onclick="tirada('tijera');">
+			</figure>
+			<figure>
+				<figcaption>Tijera</figcaption>
+				<img src="imagenes/lagarto.png" width="165" height="150" onclick="tirada('lagarto');">
+			</figure>
+			<figure>
+				<figcaption>Tijera</figcaption>
+				<img src="imagenes/spock.png" width="165" height="150" onclick="tirada('spock');">
+			</figure>
+		</article>
+				
+	</section>
+</body>
+</html>

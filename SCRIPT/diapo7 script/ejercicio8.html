@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 8</title>
+	<script>
+		function colorear(elemento,color){
+			elemento.style.backgroundColor=color;
+		}
+	</script>
+	<style>
+		div{
+			margin: 5px 20px;
+			display: inline-block;
+			border:solid 1px;
+			border-radius: 15px;
+		}
+		section{
+			border:solid 1px;
+			border-radius: 15px;
+		}
+		h1{
+			text-align: center;
+			color: #000;
+			text-shadow: 3px 3px 3px #00f;
+		}
+	</style>
+</head>
+<body>
+	<h1>Colorea los contenedores</h1>
+	<span>Color: </span>
+	<input type="color" id="incolor" value="#ff0000" />
+	<section>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+		<div onclick="colorear(this, incolor.value);">hola</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calcula años</title>
+	<script>
+		function calcular(){
+			var a1=parseFloat(document.getElementById('año1').value);
+			var a2=parseFloat(document.getElementById('año2').value);
+
+			if (a1>=a2){
+				document.getElementById('resultado').innerHTML=a1-a2;
+			}else{
+				document.getElementById('resultado').innerHTML=a2-a1;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Calcular años de diferencia</h1>
+	<label>Año 1</label>
+	<input type="number" id="año1">
+	<label>Año 2</label>
+	<input type="number" id="año2">
+
+	<button type="button" onclick="calcular();">Calculo</button>
+	<output id="resultado"></output>
+</body>
+</html>

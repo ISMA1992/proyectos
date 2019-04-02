@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 2</title>
+	<style>
+		body{
+			background-color: rgb(195, 198, 198);
+		}
+		h1{
+			color: #0000ff;
+			text-shadow: 3px 3px 3px #7B7B7B;
+		}
+		h3{
+			color: #ff0000;
+			text-shadow: 3px 3px 3px #7B7B7B;
+		}
+		output{
+			color: #037086;
+			text-shadow: 3px 3px 3px #7B7B7B;
+		}
+	</style>
+
+	<script>
+		var numeros = []; 
+
+		function recoger(num, num2, num3, num4, num5){
+			numeros = [num, num2, num3, num4, num5];
+			document.getElementById('recogida').innerHTML = "Los números recogidos son: "+numeros;
+		}
+
+		function positivos(){
+			var pos = 0;
+
+			for(let i=0; i< numeros.length; i++){
+				if (numeros[i] > 0){
+					pos++;
+				}
+				resultado.innerHTML = pos;
+			}
+
+		}
+		function negativos(){
+			var neg = 0;
+
+			for(let i=0; i< numeros.length; i++){
+				if (numeros[i] < 0){
+					neg++;
+				}
+				resultado.innerHTML = neg;
+			}
+
+		}
+		function pares(){
+			var par = 0;
+
+			for(let i=0; i< numeros.length; i++){
+				if (numeros[i] % 2 == 0){
+					par++;
+				}
+				resultado.innerHTML = par;
+			}
+
+		}
+			function impares(){
+			var impa = 0;
+
+			for(let i=0; i< numeros.length; i++){
+				if (numeros[i] % 2 != 0){
+					impa++;
+				}
+				resultado.innerHTML = impa;
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<h1>Numeros Positivos, Negativos, Pares, Impares.</h1>
+	<label>Numero: </label>
+	<input type="number" id="numero">
+	<label>Numero: </label>
+	<input type="number" id="numero2">
+	<label>Numero: </label>
+	<input type="number" id="numero3">
+	<label>Numero: </label>
+	<input type="number" id="numero4">
+	<label>Numero: </label>
+	<input type="number" id="numero5"><br>
+
+	<button onclick="recoger(parseInt(numero.value), parseInt(numero2.value),parseInt(numero3.value),parseInt(numero4.value), parseInt(numero5.value));">RECOGER</button>
+	<button onclick="numeros.pop(); recogida.innerHTML=numeros;">Borrar ultimo numero</button>
+	<h3 id="recogida"></h3>
+
+	<hr>
+	<button onclick="positivos();">Nº POSITIVOS</button>
+	<button onclick="negativos();">Nº NEGATIVOS</button>
+	<button onclick="pares();">Nº PARES</button>
+	<button onclick="impares();">Nº IMPARES</button><br>
+	<output id="resultado">0</output>
+</body>
+</html>

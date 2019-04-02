@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 4</title>
+	<script>
+		function hipotenusa(cateto, cateto2){
+			alert('La hipotenusa de tu triángulo rectángulo es : '+Math.sqrt((cateto*cateto)+(cateto2*cateto2)).toFixed(2));
+		}
+	</script>
+	<style>
+		h1{
+			text-align: center;
+			color: #000;
+			text-shadow: 3px 3px 3px #00f;
+		}
+		fieldset{
+			background-color: rgba(255,255,0,0.3);
+		}
+	</style>
+</head>
+<body>
+	<h1>Hipotenusa de un triángulo rectángulo</h1>
+	<fieldset>
+		<label>Cateto<sup>2</sup>: </label>
+		<input type="number" id="cateto">
+		<label>Cateto<sup>2</sup>: </label>
+		<input type="number" id="cateto2">
+		<button onclick="hipotenusa(cateto.value, cateto2.value);">Hipotenusa</button>
+	</fieldset>
+</body>
+</html>

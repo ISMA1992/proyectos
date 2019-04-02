@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>caracteres</title>
+
+</head>
+<body>
+	<h1>Escribe tu texto</h1>
+	<input type="text" id="text">
+	<button onclick="presenta();">Presenta texto</button>
+	<output id="resul"></output>
+	<script>
+		function presenta(){
+		var texto = text.value;
+
+		for (var i = 0; i < texto.length; i++) {
+
+			document.write(texto[i] + '<br>');
+			}		
+		}	
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ejercicio 8</title>
+	<script>
+		function calcular(){
+			var a=parseFloat(document.getElementById('ladoa').value);
+			var b=parseFloat(document.getElementById('ladob').value);
+			var c=parseFloat(document.getElementById('ladoc').value);
+
+			if (a+b>c && a+c>b && b+c>a){
+				if (a==b && a==c && b==c){
+					alert('Equilatero');
+				}else if (a==b || a==c || b==c){
+					alert('Escaleno')
+				}else{
+					alert('Isosceles')
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<label>Lado A:</label>
+	<input type="number" id="ladoa"><br>
+	<label>Lado B:</label>
+	<input type="number" id="ladob"><br>
+	<label>Lado C:</label>
+	<input type="number" id="ladoc"><br>
+
+	<button onclick="calcular();">Calcula</button>
+</body>
+</html>

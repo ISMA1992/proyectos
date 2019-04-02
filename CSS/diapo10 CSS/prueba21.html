@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex</title>
+    <style type="text/css">
+        main{
+    		margin: auto;
+    		width: 90%;
+    		border: dashed 1px #f00;
+    		display: inline-flex;
+    		flex-wrap: wrap-reverse;
+            align-items: center;
+
+    	}
+    	div{
+    		border: solid 1px #000;
+    		flex: 1;
+    	}
+    	div+div+div+div{
+    		flex: 2;
+    	}
+    </style>
+</head>
+<body>
+	<main>
+		<img src="gordo.png" width="100px" height="100px">
+		<div>hijo2</div>
+		<div>hijo3</div>
+		<div>hijo4</div>
+	</main>
+	<!-- <main>
+		<div>hijo1</div>
+		<div>hijo2</div>
+		<div>hijo3</div>
+		<div>hijo4</div>
+	</main> -->
+</body>
+</html>

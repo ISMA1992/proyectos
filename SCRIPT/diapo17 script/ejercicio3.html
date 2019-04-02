@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Galeria interactiva</title>
+	<link rel="stylesheet" type="text/css" href="galeria.css">
+
+	<script>
+			window.onload = function(){
+				//recuperar todas figuras de la galería
+				var figuras = document.getElementById('galeria').getElementsByTagName('figure');
+
+				//ponerles el tratamiento de eventos
+				for(var i=0; i<figuras.length; i++){
+					//al hacer click sobre una figura, se debe mostrar en grande
+					figuras[i].onclick = function(){
+						mostrar(this);
+					}
+				}
+			}
+
+
+			function mostrar(figura){
+				//crea la figura a pantalla completa
+				var figuraGrande = document.createElement('figure');
+				figuraGrande.setAttribute('id','grande');
+
+				//al hacer click en la figura grande, ésta se cerrará
+				figuraGrande.onclick = function(){this.remove();}
+
+				//crear la imagen de dentro de la figura grande
+				var imagen = document.createElement('img');
+				imagen.setAttribute('src', figura.firstElementChild.src);
+				
+				//añadir la imagen a la figura grande
+				figuraGrande.appendChild(imagen);				
+
+
+				//recuperar la información y ponerla en un figcaption
+				var leyenda = document.createElement('figcaption');
+				var lugar = figura.firstElementChild.dataset.lugar;
+				var fecha = figura.firstElementChild.dataset.fecha;
+				leyenda.innerHTML = lugar.toUpperCase()+' ('+fecha+')';
+				figuraGrande.appendChild(leyenda);
+
+				//añadir la figura grande al body
+				document.body.appendChild(figuraGrande);
+			}
+				
+
+			function ima1(){
+				var image = document.getElementsByTagName('img');
+
+			for(let i = 0; i < image.length; i++){
+				image[i].src = "imagenes/marvel/marvel"+[i]+".png";
+				image[i].dataset.lugar ="INFINITY WAR";
+
+
+			}
+			document.getElementById('titulo').innerHTML = "MARVEL´S GALLERY ";
+		} 
+		function ima2(){
+				var image = document.getElementsByTagName('img');
+
+			for(let i = 0; i < image.length; i++){
+				image[i].src = "imagenes/DC/DC"+[i]+".png";
+				image[i].dataset.lugar ="THE JUSTICE LEAGUE";
+
+			}
+			document.getElementById('titulo').innerHTML = "DC´S GALLERY";
+		} 
+		function ima3(){
+				var image = document.getElementsByTagName('img');
+
+			for(let i = 0; i < image.length; i++){
+				image[i].src = "imagenes/walkingdead/walkingdead"+[i]+".png";
+				image[i].dataset.lugar ="END THE WORLD";
+
+			}
+			document.getElementById('titulo').innerHTML = "THE WALKING DEAD´S GALLERY";
+		}
+		function ima4(){
+				var image = document.getElementsByTagName('img');
+
+			for(let i = 0; i < image.length; i++){
+				image[i].src = "imagenes/dragonball/goku"+[i]+".png";
+				image[i].dataset.lugar ="LA-(ESPERANZA)-DE-LA-TIERRA";
+
+			}
+			document.getElementById('titulo').innerHTML = "DRAGON BALL´S GALLERY";
+		}
+	</script>
+</head>
+<body>
+		
+	<main>
+		<h1 id="titulo">Dragon Ball</h1>
+	
+		<section id="galeria">
+				<figure>
+					<img src="imagenes/dragonball/goku0.png" data-lugar="LA-(ESPERANZA)-DE-LA-TIERRA" data-fecha="25/03/2019">
+				</figure>
+				<figure>
+					<img src="imagenes/dragonball/goku1.png" data-lugar="LA-(ESPERANZA)-DE-LA-TIERRA" data-fecha="25/03/2019">
+				</figure>
+				<figure>
+					<img src="imagenes/dragonball/goku2.png" data-lugar="LA-(ESPERANZA)-DE-LA-TIERRA" data-fecha="25/03/2019">
+				</figure>
+				<figure>
+					<img src="imagenes/dragonball/goku3.png" data-lugar="LA-(ESPERANZA)-DE-LA-TIERRA" data-fecha="25/03/2019">
+				</figure>
+				<figure>
+					<img src="imagenes/dragonball/goku4.png" data-lugar="LA-(ESPERANZA)-DE-LA-TIERRA" data-fecha="25/03/2019">
+				</figure>
+				<figure>
+					<img src="imagenes/dragonball/goku5.png" data-lugar="LA-(ESPERANZA)-DE-LA-TIERRA" data-fecha="25/03/2019">
+				</figure>
+				<figure>
+					<img src="imagenes/dragonball/goku6.png" data-lugar="LA-(ESPERANZA)-DE-LA-TIERRA" data-fecha="25/03/2019">
+				</figure>
+				<figure>
+					<img src="imagenes/dragonball/goku7.png" data-lugar="LA-(ESPERANZA)-DE-LA-TIERRA" data-fecha="25/03/2019">
+				</figure>
+				<figure>
+					<img src="imagenes/dragonball/goku8.png" data-lugar="LA-(ESPERANZA)-DE-LA-TIERRA" data-fecha="25/03/2019">
+				</figure>
+				<figure>
+					<img src="imagenes/dragonball/goku9.png" data-lugar="LA-(ESPERANZA)-DE-LA-TIERRA" data-fecha="25/03/2019">
+				</figure>
+		</section>
+		<button onclick="ima1();">MARVEL</button>
+		<button onclick="ima2();">DC</button>
+		<button onclick="ima3();">THE WALKING DEAD</button>
+		<button onclick="ima4();">DRAGON BALL</button>
+	</main>
+	<footer>
+		<a href="https://www.lucapc.es" target="_blank"><h3>LUCA PC´s desing</h3></a>
+	</footer>
+</body>
+</html>

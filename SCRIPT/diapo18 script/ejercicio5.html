@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>El dado que gira</title>
+	<style>
+		.img{
+			width: 200px; height: 200px;
+			border-radius: 50px;
+		}
+	</style>
+	<script>
+		function alazar(){
+			var aleatorio = Math.floor((Math.random()*6)+1);
+			document.getElementById('dado').innerHTML = "<img src='imagenes/dado"+aleatorio+".png' />";
+		}	
+	</script>
+</head>
+<body>
+	<h1>EL DADO LOCO</h1>
+	Tiradas: <span id="tiradas">0</span>
+	<div id="dado" class="img"></div>
+	<button onclick="alazar();">TIRA EL DADO</button>
+</body>
+</html>

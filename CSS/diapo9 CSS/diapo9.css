@@ -1,0 +1,38 @@
+th{
+	border-radius: 20px 20px 0px 0px;
+	width: 200px; height: 70px;
+	text-align: center;
+	background-color: #AAFA54;
+}
+td{
+	background-color: #FCF6D9;
+	width: 200px; height: 70px;
+	text-align: center;
+	box-shadow: 2px 2px 2px #FAE58D;
+}
+td img{
+	width: 50px; height: 50px;
+}
+td:first-of-type{
+	border-radius: 20px 0px 0px 20px;
+	background-color: #AAFA54;
+}
+h2{
+	display: inline-block;
+	margin-left: 2%;
+	color: #000; 
+}
+.peque{
+	font-size: 1em;
+}	
+p{
+	margin-left: 7%;
+	display: inline-block;
+	color: #0E7C05; 
+	text-shadow: 2px 2px 2px #050505;
+}	
+.grande{
+	font-size: 1.8em;
+}
+
+	

@@ -1,0 +1,83 @@
+		header, nav, main, footer{
+			margin: auto;
+			padding: 0px;
+			border: solid 1px #000;
+		}
+		/*todo el contenido*/
+		body{
+			display: grid;
+			grid-gap: 10px;
+			grid-template-columns: 30% 30% auto;
+			grid-template-areas: 
+			'h h h'
+			'n n n'
+			'm m m'
+			'f f f' ;
+			margin: auto auto;
+			padding: 20px;
+		}
+		/*cabecera*/
+		header{
+			width: 100%;
+			border-radius: 10px;
+			text-align: center;
+			grid-area: h;
+		}
+		/*navegador*/
+		nav{
+			border-radius: 10px;
+			text-align: center;
+			width: 100%;
+			position: sticky;
+			z-index: 1;
+			top: 0;
+			grid-area: n;
+		}
+		/*lista navegador*/
+		ul{
+			margin: 10px auto;
+			text-align: center;
+			min-width: 70%;
+		}
+		li{
+			background-color: rgba(255, 255, 255,0.70);
+			max-width: 70%;
+			display: inline-block;
+			border: solid 1px;
+			border-radius: 20px;
+		}
+		/*contenido*/
+		main{
+			width: 100%;
+			grid-area: m;
+			display: flex;
+			flex-wrap: wrap;
+			border-radius: 10px;
+			
+		}
+
+		/*pie de pagina*/
+		footer{
+			grid-area: f;
+		}
+		/*contenedor img*/
+		figure{
+			flex: 1;
+			min-width: 300px;
+		}
+		img{
+			border-radius: 20px;
+		}
+		/*filtro galeria img*/
+		.galeria{
+			filter: grayscale(100%);
+		}
+		.galeria:hover{
+			filter: grayscale(0%);
+			transition: filter 2s;
+			cursor: zoom-in;
+		}
+
+		
+		
+		

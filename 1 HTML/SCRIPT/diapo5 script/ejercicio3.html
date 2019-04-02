@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 3</title>
+	<script>
+		function calcular(){
+			// recoger salario
+			var sa=parseFloat(document.getElementById('salario').value);
+			var nvl=parseFloat(document.getElementById('nivel').value);
+			// hacer calculo
+				calculo=sa*nvl;
+			document.getElementById('resultado').innerHTML=calculo.toFixed(2);
+		}
+	</script>
+</head>
+<body>
+	<h1>Calcular el salario</h1>
+	<article>
+		<label>Introduce el salario anterior:</label>
+			<input type="number" id="salario"/><br><br>
+		<label>Nivel:</label>
+		<select id="nivel">
+			<option value="1.3">Nivel 1</option>
+			<option value="1.05">Nivel 2</option>
+			<option value="0.93">Otros Niveles</option>
+			
+		</select><br><br>	
+		<button onclick="calcular();">Calcular</button><br><br>
+		<label>Tu nuevo salario es:</label>
+		<output id="resultado"></output>	
+	</article>
+</body>
+</html>

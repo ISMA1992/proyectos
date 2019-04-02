@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 2 C</title>
+	<script>
+		function area(){
+			var r=parseInt(document.getElementById('radio').value);
+			var PI=3.1416;
+
+			var resultado = PI*r*2 .toFixed(2);
+
+			alert('El area de tu circulo es '+resultado);
+		}
+	</script>
+	<style>
+		h1{
+			text-align: center;
+			color: #000;
+			text-shadow: 3px 3px 3px #00f;
+		}
+		fieldset{
+			background-color: rgba(255,255,0,0.3);
+		}
+	</style>
+</head>
+<body>
+	<h1>Area Círculo</h1>
+	<fieldset>
+		<label>Radio: </label>
+		<input type="number" id="radio"><br><br>
+		<button onclick="area();">Calcula el area</button>
+	</fieldset>
+</body>
+</html>

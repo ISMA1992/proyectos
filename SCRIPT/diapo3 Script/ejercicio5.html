@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="author" content="Ismael Lucena">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ejercicio script 5</title>
+	<script>
+		function euros(){
+			var e=parseFloat(document.getElementById('euros').value);
+
+			var result= e*166;
+
+			document.getElementById('resultado').innerHTML=result;
+		}
+		function pesetas(){
+			var p=parseFloat(document.getElementById('euros').value);
+
+			var result= p/166;
+
+			document.getElementById('resultado').innerHTML=result;
+		}
+	</script>
+
+</head>
+<body>
+	<h1>Convertidor Euros/Pesetas</h1><br>
+
+	<label>Cantidad</label>
+	<input type="number" id="euros">
+	<button onclick="euros();">Pesetas</button>
+	<button onclick="pesetas();">Euros</button>
+	<hr>
+
+	<span id="resultado">0</span><br>
+	<img src="conversor.jpg" width="150" height="150">
+</body>
+</html>

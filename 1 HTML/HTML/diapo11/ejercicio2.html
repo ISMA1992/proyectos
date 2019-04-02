@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ejercicio2</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<form method="post" autocomplete="off">
+			<h2>ejercicioA</h2>
+		<fieldset>
+			<input type="hidden" name="login" value="1">
+			<label>DNI</label>
+			<input type="text" name="dnilogin" pattern="^\d{8}[A-Z]{1}$" maxlength="9" title="DNI valido"/></br>
+			<input type="submit" name="Acceder">
+		</fieldset>
+				<h2>ejercicioB</h2>
+		<fieldset>
+				<label>DNI</label>
+				<input type="text" name="dnilogin" pattern="^\d{8}[A-HJ-NP-TV-Z]$" maxlength="9" title="DNI valido$"/></br>
+				<input type="submit" name="Acceder">
+		</fieldset>
+				<h2>ejercicioC</h2>
+		<fieldset>
+				<label>DNI/NIE</label>
+				<input type="text" name="dnilogin" pattern="(^[XYZ]\d{7})|(^\d{8}[A-HJ-NP-TV-Z]{1})$" maxlength="9" title="DNI valido"/></br>
+				<input type="submit" name="Acceder">
+		</fieldset>
+				<h2>ejercicioD</h2>
+		<fieldset>
+				<label>Hora</label>
+				<input type="time" name="hora" step="1"></br>
+				<input type="submit" name="Acceder">
+		</fieldset>
+				<h2>ejercicioE</h2>
+		<fieldset>
+				<label>Nº Teléfono</label>
+				<input type="text" pattern="^{+}\d{11}$"></br>
+				<input type="submit" name="Acceder">
+		</fieldset>
+				<h2>ejercicioF</h2>
+		<fieldset>
+				<label>fecha</label>
+				<input type="date" name="fechahora" pattern="^[0-23]$"></br>
+				<input type="submit" name="Acceder">
+		</fieldset>
+				<h2>ejercicioG</h2>
+		<fieldset>
+				<label>fecha y hora</label>
+				<input type="text" name="fechahora" pattern="^((([0][1-31]\d)|([1-12]\d))|(([1900-2100]\d))$"/></br>
+				<input type="submit" name="Acceder">
+		</fieldset>		
+	</form>
+
+</body>
+</html>

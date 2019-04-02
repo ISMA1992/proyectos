@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 1</title>
+	<style>
+		h1{
+			color: #0021FF;
+			text-shadow: 3px 3px 3px #707174;
+		}
+	</style>
+</head>
+<body>
+	<!-- te muetra en pantalla los seleccionados por posicion -->
+	<h1>Array slice()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		var marca = coches.slice(0, 3);
+		document.write(marca);
+	</script>
+
+	<!-- Ordena alfabeticamente -->
+	<h1>Array sort()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		var marca = coches.sort();
+		document.write(marca);
+	</script>
+	
+	<!-- quita o añade elementos no seleccionados -->
+	<h1>Array splice()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		var marca = coches.splice(0,3);
+		document.write(marca);
+	</script>
+	
+	<!-- convierte el array en un string -->
+	<h1>Array toString()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		coches.toString(1);
+		document.write(coches);
+	</script>
+	
+	<!-- áñade elementos a la array -->
+	<h1>Array unshift()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		coches.unshift("Fiat","Mercedes","Honda");
+		document.write(coches);
+	</script>
+	
+	<!-- retorna a un valor anterior -->
+	<h1>Array valueOf()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		document.write(coches);
+		coches.valueOF();
+	</script>
+	<!-- une dos o mas arrays -->
+	<h1>Array concat()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		var modelo = ["Supra", "M3","Mustang"];
+		var marc= coches.concat(modelo);
+		document.write(marc);
+	</script>
+	<!-- busca un elemento y retorna su posicion -->
+	<h1>Array indexOF()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		var a = coches.indexOf("Ford");
+		document.write(a);
+	</script>
+	<!-- junta los elementos de un array en sttring -->
+	<h1>Array join()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		var j = coches.join();
+		document.write(j);
+	</script>
+	<!-- ultima aparicion de un elemento y retorna la posicion -->
+	<h1>Array lastIndexOf()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		var l = coches.lastIndexOf("Audi");
+		document.write(l);
+	</script>
+	<!-- Quita el ultimo elemento de una array y lo retorna -->
+	<h1>Array pop()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		coches.pop();
+		document.write(coches);
+	</script>
+	<!-- Añade un elemento nuevo al final de la array -->
+	<h1>Array push()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		coches.push("Honda");
+		document.write(coches);
+	</script>
+	<!-- invierte el orden de los elementos -->
+	<h1>Array reverse()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		coches.reverse();
+		document.write(coches);
+	</script>
+	<!-- Quita el primer elemento de la array -->
+	<h1>Array shift()</h1>
+	<script>
+		var coches = ["Toyota","BMW","Ford","Nissan","Audi"];
+		coches.shift();
+		document.write(coches);
+	</script>
+	
+</body>
+</html>

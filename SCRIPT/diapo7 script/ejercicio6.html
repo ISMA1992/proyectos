@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercio 6</title>
+	<script>
+		function doblar(imagen){
+			imagen.height*=3;
+			imagen.width*=3;
+		}
+	</script>
+	<style>
+		h1{
+			text-align: center;
+			color: #000;
+			text-shadow: 3px 3px 3px #00f;
+		}
+	</style>
+</head>
+<body>
+	<h1>Dobla la imagen</h1>
+	<img src="homer.png" onclick="doblar(this);" height="100" width="50" id="foto">
+	<button onclick="doblar(foto);">Clica-MI</button>
+</body>
+</html>

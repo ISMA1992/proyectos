@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 7</title>
+	<script>
+		function escalar(elemento, valor){
+				elemento.height*=valor;
+				elemento.width*=valor;
+		}
+	</script>
+	<style>
+		h1{
+			text-align: center;
+			color: #000;
+			text-shadow: 3px 3px 3px #00f;
+		}
+	</style>
+</head>
+<body>
+	<h1>Escalar imagenes</h1>
+	<img src="homer.png" onclick="escalar(this, 0.5);" height="200" width="100">
+	<img src="homer.png" onclick="escalar(this, 1.5);" height="200" width="100">
+</body>
+</html>

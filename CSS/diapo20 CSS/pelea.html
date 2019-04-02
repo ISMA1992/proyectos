@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Pelea Goku VS Freezer</title>
+	<style>
+		#espacio{
+			height: 800px; width: 100%;
+			position: relative;
+		}
+		#nave{
+			height: 300px; width: 300px;
+			position: absolute;
+			animation-name: pelea, contra;
+			animation-duration: 5s, 3s;
+			animation-timing-function: cubic-bezier(.67,.06,.94,.74), linear;
+			animation-iteration-count: infinite;
+			animation-direction: alternate,normal;
+		}
+		#energia{
+			height: 300px; width: 300px;
+			position: absolute;
+			animation-name: pelea, contra;
+			animation-duration: 3s, 5s;
+			animation-timing-function: cubic-bezier(.67,.06,.94,.74), linear;
+			animation-iteration-count: infinite;
+			animation-direction: alternate-reverse,reverse;
+		}
+		@keyframes pelea{
+			0%{top: 0px; left: 0px;}
+			30%{top: 500px; left: 400px;}
+			60%{bottom: 500px; left: 750px;}
+			80%{top: 500px; left: 1000px;}
+			90%{top: 100px; left: 1400px;}
+			100%{top:0px; left: 50px;}
+		}
+		@keyframes contra{
+			from{transform: rotateZ(0deg);}
+			to{transform: rotateX(360deg) rotateY(180deg);}
+		}
+		div{
+			background-image: url(imagenes/poder.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			border: solid 1px;
+		}
+		img{
+			width: 100%;
+		}
+		h1{
+			text-align: center;
+			color: #000;
+			text-shadow: 3px 3px 3px #0ff;
+		}
+	</style>
+</head>
+<body>
+	<h1>Pelea Goku vs freezer</h1>
+	<div id="espacio">
+		<figure id="nave">
+			<img src="imagenes/gokuexp.gif" >
+		</figure>
+		<figure id="energia">
+			<img src="imagenes/freezer.gif" >
+		</figure>
+	</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+		html{
+			background-image: url(samsung2.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		header,main,footer,div,section{
+			border: solid 2px;
+			border-radius: 5px;
+			text-align: center;
+			box-shadow: 2px 2px 2px  #2AF3F9;
+		}
+		/*todo el contenido*/
+		body{
+			display: grid;
+			grid-gap: 10px;
+			grid-template-columns: 30% 30% auto;
+			grid-template-areas: 
+			'h h h'
+			'n n n'
+			'foto m m'
+			'foto g g'
+			'o o e'
+			'f f f' ;
+			width: 90%;
+			max-width: 1700px;
+			margin: 20px auto;
+			padding: 20px;
+		}
+		/*cabecera*/
+		header{
+			text-align: right;
+			grid-area: h;
+			background-image: url(android.gif);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		header img{
+        	width: 20%;
+        	margin-right: 10px; 
+        }
+		/*menu navegacion*/
+		nav{
+			position: sticky;
+			top: 0;
+			text-align: center;
+			grid-area: n;
+		}
+		/*lista navegador*/
+		ul{
+			margin: 10px auto;
+			text-align: center;
+			min-width: 70%;
+		}
+		li{
+			background-color: rgba(255, 255, 255,0.4);
+			max-width: 70%;
+			display: inline-block;
+			border: solid 1px;
+			border-radius: 20px;
+		}
+		/*imagenes contenedor izq*/
+		#snesbig{
+			grid-area: foto;
+		}
+		/*contenido de texto*/
+		main{
+			grid-area: m;
+		}
+		/*galeria de imagenes*/
+		#galeria{
+			grid-area: g;
+		}
+		/*opiniones o valoraciones*/
+		#opiniones{
+			grid-area: o;
+		}
+		/*especificaciones producto*/
+		#especificaciones{
+			grid-area: e;
+		}
+		/*pie de pagina*/
+		footer{
+			grid-area: f;
+		}
+		/*parrafo footer*/
+        footer p{
+        	color: #0f0;
+        	text-align: right;
+        	margin-right: 10px;
+        	text-shadow: 2px 2px 2px #00f;
+        }
+        /*titulo footer*/
+        footer h4{
+        	font-size: 1vw;
+        	color: #fff;
+        	text-shadow: 5px 5px 5px #00f;
+        }
+        /*imagenes de section (galeria)*/
+        section img{
+        	width: 20%;
+        }
+        /*imagenes contenedor lateral izq*/
+        div img{
+        	padding-top: 50px;
+        	width: 70%;
+        }
+        /*todos los titulos de pagina*/
+        h1{
+        	color: #2CA417;
+        	text-shadow: 3px 3px 3px #fff;
+        }
+        h2,h3{
+        	font-size: 1.2vw;
+        	color: #0638C8;
+        	text-shadow: 3px 3px 3px #BDBEC1;
+        }
+        h4{
+        	font-size: 1.2vw;
+        	color: #D5D835;
+        	text-shadow: 3px 3px 3px #000;
+        }
+        img:hover{
+        	transform: scale(1.2);
+        }
+        p{
+        	color: #fff;
+        }
+        @media screen and (max-width: 500px){
+        	h2,h3,h4,footer h4{
+        		font-size: 5vw;
+	        }
+	    }

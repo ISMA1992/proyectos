@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Crea div</title>
+	<style>
+		div{
+			width: 250px; height: 100px;
+			text-align: center;
+			border: solid 1px;
+			border-radius: 20px;
+		}
+	</style>
+	<script>
+		var i=0;
+		function divs(){
+			var dv = document.createElement('div');
+			var txt = document.createTextNode('Este div es muy div del 4A');
+
+			dv.appendChild(txt);
+
+			document.body.appendChild(dv);
+		}
+		function divs2(){
+			
+			if(i!=1){
+				var dv = document.createElement('div');
+				var txt = document.createTextNode('Este DIV es el hijo del 4B');
+
+				dv.appendChild(txt);
+
+				document.body.appendChild(dv);
+				i++;
+			}
+
+
+		}
+	</script>
+</head>
+<body>
+	<div onmouseenter="divs();">Este div es un div es el del 4A</div>
+	<div onmouseenter="divs2();">Este div es un div es el del 4B</div>
+	<div onmouseenter="divs();" onmouseleave="parentNode.removeChild(this);">Este div es un div es el del 4C</div>
+</body>
+</html>

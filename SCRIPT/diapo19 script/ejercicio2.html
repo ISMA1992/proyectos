@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Galeria Coches</title>
+	<style>
+		html{
+			background-color: rgb(163, 160, 160);
+		}
+		h1{
+			color: #0000ff;
+			text-shadow: 3px 3px 3px #00ff00;
+			text-align: center;
+		}
+		#galeria{
+			width: 90%;
+		}
+		#grande{
+			position: fixed;
+			text-align: center;
+			width: 95%;
+			height: 95%;
+			top:0px;
+			left: 0px;
+			background-color: rgba(4, 0, 255,0.4);
+		}
+
+		#grande figcaption{
+			font-size: 2em;
+			color: white;
+		}
+
+		#grande img{
+			height: 80%;
+			margin: 50px auto 50px auto;
+		}	
+		img{
+			width: 100%;
+		}	
+		figure{
+			box-shadow: 3px 3px 3px #0000ff;
+			display: inline-block;
+			width: 20%;
+		}
+		</style>
+		<script>
+			window.onload = function(){
+				
+				var figuras = document.getElementById('galeria').getElementsByTagName('figure');
+
+				for(var i=0; i<figuras.length; i++){
+					
+					figuras[i].onclick = function(){
+						mostrar(this);
+					}
+				}
+			}
+
+			function mostrar(figura){
+				var figurag = document.createElement('figure');
+				figurag.setAttribute('id','grande');
+				figurag.onclick = function(){this.remove();}
+				
+				var imagen = document.createElement('img');
+				imagen.setAttribute('src', figura.firstElementChild.src);
+				figurag.appendChild(imagen);
+
+				document.body.appendChild(figurag);
+			}
+		</script>
+</head>
+<body>
+	<h1> COCHES TUNNING </h1>
+	<div id="galeria">
+			<figure>
+				<img src="imagenes/toyota.png">
+			</figure>
+			<figure>
+				<img src="imagenes/nissan.png">
+			</figure>
+			<figure>
+				<img src="imagenes/golfito.jpg">
+			</figure>
+			<figure>
+				<img src="imagenes/dodge.jpg">
+			</figure>
+			<figure>
+				<img src="imagenes/bmw.png">
+			</figure>
+			<figure>
+				<img src="imagenes/astonmartin.png">
+			</figure>
+			<figure>
+				<img src="imagenes/chevrolet.png">
+			</figure>
+			<figure>
+				<img src="imagenes/mustang.png">
+			</figure>
+	</div>
+</body>
+</html>
